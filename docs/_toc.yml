@@ -1,0 +1,24 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro
+
+- part: Introduction
+  chapters:
+    - file: system
+
+- part: PRObs ontology concepts
+  chapters:
+    - file: observations
+    - file: composition_equivalence
+    - file: inferred_observations
+    - file: provenance
+    - file: classification_codes
+
+- part: Inferring new Observations
+  chapters:
+    - file: reasoning/intro
+
+- part: Endmatter
+  chapters:
+    - file: references

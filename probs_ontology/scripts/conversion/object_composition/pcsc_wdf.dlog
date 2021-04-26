@@ -1,0 +1,34 @@
+
+ufu:PCSC( ?LID , ufu:ancestor , ?NIDParent ) :-
+        ufu:PCSC( ?LID , ufu:ancestor , ?Ancestor ) ,
+        ufu:PCSC( ?Ancestor , ufu:parent , ?NIDParent ) .
+
+ufu:PCSC( ?ObsID , ufu:wasDerivedFrom , ?Obs ) :-
+        ufu:PCSC( ?LID , ufu:ancestor , ?Ancestor ) ,
+        ufu:PCSC( ?Ancestor , ufu:wasDerivedFrom , ?Obs ) ,
+        [ ?Obs , a , :DirectObservation ] ,
+        ufu:PCSC( ?ObsID , ufu:fromLeaf , ?LID ) .
+ufu:PCSC( ?ObsID , ufu:wasDerivedFrom , ?ObsWDF ) :-
+        ufu:PCSC( ?LID , ufu:ancestor , ?Ancestor ) ,
+        ufu:PCSC( ?Ancestor , ufu:wasDerivedFrom , ?Obs ) ,
+        [ ?Obs , a , :InferredObservation ] ,
+        [ ?Obs , prov:wasDerivedFrom , ?ObsWDF ] ,
+        ufu:PCSC( ?ObsID , ufu:fromLeaf , ?LID ) .
+
+ufu:PCSC( ?ObsID , ufu:bound , :LowerBound ) :-
+        ufu:PCSC( ?LID , ufu:ancestor , ?Ancestor ) ,
+        ufu:PCSC( ?Ancestor , ufu:wasDerivedFrom , ?Obs ) ,
+        ufu:PCSC( ?Obs , a , ufu:EmptyObservation ) ,
+        ufu:PCSC( ?ObsID , ufu:fromLeaf , ?LID ) .
+
+ufu:PCSC( ?ObsID , ufu:bound , :LowerBound ) :-
+        ufu:PCSC( ?LID , ufu:ancestor , ?Ancestor ) ,
+        ufu:PCSC( ?Ancestor , ufu:wasDerivedFrom , ?Obs ) ,
+        ufu:PCSC( ?Obs , ufu:EmptyMeasurement , true ) ,
+        ufu:PCSC( ?ObsID , ufu:fromLeaf , ?LID ) .
+
+ufu:PCSC( ?ObsID , ufu:bound , :LowerBound ) :-
+        ufu:PCSC( ?LID , ufu:ancestor , ?Ancestor ) ,
+        ufu:PCSC( ?Ancestor , ufu:wasDerivedFrom , ?Obs ) ,
+        [?Obs, :bound, :LowerBound] ,
+        ufu:PCSC( ?ObsID , ufu:fromLeaf , ?LID ) .

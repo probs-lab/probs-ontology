@@ -1,0 +1,32 @@
+set dir.facts "$(dir.root)/data"
+set dir.output "$(dir.root)/output"
+set dir.scripts "$(dir.root)/scripts/reasoning"
+set dir.queries "$(dir.root)/scripts/reasoning/queries"
+set dir.dlog "$(dir.root)/scripts/reasoning"
+
+set query.answer-format "text/csv"
+
+set output out
+
+prefix : <https://ukfires.org/probs/ontology/>
+prefix sys: <http://ukfires.org/probs/system/>
+prefix ufpc: <https://ukfires.org/probs/ontology/prodcom/>
+prefix ufpc2016: <https://ukfires.org/probs/ontology/prodcom/2016/>
+prefix ufpc2017: <https://ukfires.org/probs/ontology/prodcom/2017/>
+prefix ufpcd: <https://ukfires.org/probs/ontology/prodcom_data/>
+prefix ufpcd2016: <https://ukfires.org/probs/ontology/prodcom_data/2016/>
+prefix ufpcd2017: <https://ukfires.org/probs/ontology/prodcom_data/2017/>
+prefix ufpcd2018: <https://ukfires.org/probs/ontology/prodcom_data/2018/>
+prefix ufct: <https://ukfires.org/probs/ontology/comtrade/>
+prefix ufct2017: <https://ukfires.org/probs/ontology/comtrade/2017/>
+prefix ufctd: <https://ukfires.org/probs/ontology/comtrade_data/>
+prefix ufctd2018imports: <https://ukfires.org/probs/ontology/comtrade_data/2018imports/>
+prefix ufctd2018exports: <https://ukfires.org/probs/ontology/comtrade_data/2018exports/>
+prefix ufrd: <https://ukfires.org/probs/ontology/raw_data/>
+prefix ufu: <https://ukfires.org/probs/ontology/utility/>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix qudt: <http://qudt.org/schema/qudt/>
+prefix quantitykind: <http://qudt.org/vocab/quantitykind/>
+prefix gnd: <https://sws.geonames.org/>
+prefix gn: <http://www.geonames.org/ontology#>
+prefix time: <http://www.w3.org/2006/time#>

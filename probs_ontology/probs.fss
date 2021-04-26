@@ -1,0 +1,276 @@
+Prefix(owl: = <http://www.w3.org/2002/07/owl#>)
+Prefix(rdf: = <http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(rdfox: = <http://oxfordsemantic.tech/RDFox#>)
+Prefix(rdfs: = <http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl: = <http://www.w3.org/2003/11/swrl#>)
+Prefix(swrlb: = <http://www.w3.org/2003/11/swrlb#>)
+Prefix(xsd: = <http://www.w3.org/2001/XMLSchema#>)
+Ontology(<default>
+
+Declaration( Class( <https://ukfires.org/probs/ontology/InferredObservation> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/objectDirectlyDefinedBy> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Dataset> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Stock> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/hasRole> <https://ukfires.org/probs/ontology/Observation> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/objectName> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/objectName> )
+
+Declaration( NamedIndividual( <https://ukfires.org/probs/ontology/UpperBound> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Process> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/hasRegion> ) )
+
+FunctionalObjectProperty( <https://ukfires.org/probs/ontology/hasRegion> )
+
+SubObjectPropertyOf( <https://ukfires.org/probs/ontology/objectDirectlyDefinedBy> <https://ukfires.org/probs/ontology/objectDefinedBy> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/metricName> xsd:string )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/objectEquivalentTo> ) )
+
+SymmetricObjectProperty( <https://ukfires.org/probs/ontology/objectEquivalentTo> )
+
+TransitiveObjectProperty( <https://ukfires.org/probs/ontology/objectEquivalentTo> )
+
+ReflexiveObjectProperty( <https://ukfires.org/probs/ontology/objectEquivalentTo> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/ProcessOutput> <https://ukfires.org/probs/ontology/Flow> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/DirectObservation> <https://ukfires.org/probs/ontology/Observation> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/hasClassificationCode> ) )
+
+SubClassOf( <https://ukfires.org/probs/ontology/Flow> <https://ukfires.org/probs/ontology/Role> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/objectInferredDefinedBy> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/objectDefinedBy> <https://ukfires.org/probs/ontology/Observation> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/ProcessInput> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Role> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/comtrade/ClassificationCodeList> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Export> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/consumes> ) )
+
+SubClassOf( <https://ukfires.org/probs/ontology/InferredObservation> <https://ukfires.org/probs/ontology/Observation> )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/measurement> <https://ukfires.org/probs/ontology/Observation> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/comtrade/ClassificationCodeList> <https://ukfires.org/probs/ontology/ClassificationCodeList> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/ClassificationCodeList> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/prodcom/ClassificationCodeList> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/belongsToList> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/ClassificationCode> ) )
+
+FunctionalObjectProperty( <https://ukfires.org/probs/ontology/belongsToList> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/Export> <https://ukfires.org/probs/ontology/Flow> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/ReferenceObject> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/ProcessOutput> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/MeasurementBound> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/objectInferredDefinedBy> <https://ukfires.org/probs/ontology/InferredObservation> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/SoldProduction> <https://ukfires.org/probs/ontology/Flow> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Import> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/SoldProduction> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/DirectObservation> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/bound> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/metric> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/produces> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/objectComposedOf> ) )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/hasRole> ) )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/bound> <https://ukfires.org/probs/ontology/MeasurementBound> )
+
+ReflexiveObjectProperty( <https://ukfires.org/probs/ontology/processEquivalentTo> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/processEquivalentTo> ) )
+
+TransitiveObjectProperty( <https://ukfires.org/probs/ontology/processEquivalentTo> )
+
+SymmetricObjectProperty( <https://ukfires.org/probs/ontology/processEquivalentTo> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/ReferenceObject> <https://ukfires.org/probs/ontology/Object> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/objectInferredDefinedBy> ) )
+
+FunctionalObjectProperty( <https://ukfires.org/probs/ontology/partOfDataset> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/partOfDataset> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/hasClassificationCode> <https://ukfires.org/probs/ontology/Object> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/hasTimePeriod> ) )
+
+FunctionalObjectProperty( <https://ukfires.org/probs/ontology/hasTimePeriod> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/partOfDataset> <https://ukfires.org/probs/ontology/Dataset> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/metricName> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/metricName> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/processComposedOf> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/prodcom/ClassificationCode> ) )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/processDescription> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/processDescription> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/processName> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/processName> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/objectDescription> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/objectDescription> )
+
+Declaration( NamedIndividual( <https://ukfires.org/probs/ontology/LowerBound> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/objectDirectlyDefinedBy> <https://ukfires.org/probs/ontology/DirectObservation> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/Stock> <https://ukfires.org/probs/ontology/Role> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/measurement> xsd:decimal )
+
+SubClassOf( <https://ukfires.org/probs/ontology/prodcom/ClassificationCodeList> <https://ukfires.org/probs/ontology/ClassificationCodeList> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/codeDescription> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/codeDescription> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/comtrade/ClassificationCode> ) )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Observation> ) )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/codeDescription> <https://ukfires.org/probs/ontology/ClassificationCode> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/codeName> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/codeName> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/comtrade/ClassificationCode> <https://ukfires.org/probs/ontology/ClassificationCode> )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/objectName> <https://ukfires.org/probs/ontology/Object> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/codeDescription> xsd:string )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/codeName> <https://ukfires.org/probs/ontology/ClassificationCode> )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/processDescription> <https://ukfires.org/probs/ontology/Process> )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/processName> <https://ukfires.org/probs/ontology/Process> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/processDefinedBy> <https://ukfires.org/probs/ontology/Observation> )
+
+DataPropertyDomain( <https://ukfires.org/probs/ontology/objectDescription> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/processDefinedBy> <https://ukfires.org/probs/ontology/Process> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Object> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/bound> <https://ukfires.org/probs/ontology/Observation> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/belongsToList> <https://ukfires.org/probs/ontology/ClassificationCodeList> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/hasTimePeriod> <https://ukfires.org/probs/ontology/Observation> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/objectEquivalentTo> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/objectEquivalentTo> <https://ukfires.org/probs/ontology/Object> )
+
+Declaration( Class( <https://ukfires.org/probs/ontology/Flow> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/hasRegion> <https://ukfires.org/probs/ontology/Observation> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/processDefinedBy> ) )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/consumes> <https://ukfires.org/probs/ontology/Process> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/processName> xsd:string )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/objectName> xsd:string )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/belongsToList> <https://ukfires.org/probs/ontology/ClassificationCode> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/objectComposedOf> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/objectComposedOf> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/consumes> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/objectDirectlyDefinedBy> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/processEquivalentTo> <https://ukfires.org/probs/ontology/Process> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/processEquivalentTo> <https://ukfires.org/probs/ontology/Process> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/codeName> xsd:string )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/processComposedOf> <https://ukfires.org/probs/ontology/Process> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/processComposedOf> <https://ukfires.org/probs/ontology/Process> )
+
+Declaration( NamedIndividual( <https://ukfires.org/probs/ontology/ExactBound> ) )
+
+SubClassOf( <https://ukfires.org/probs/ontology/prodcom/ClassificationCode> <https://ukfires.org/probs/ontology/ClassificationCode> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/processDescription> xsd:string )
+
+SubClassOf( <https://ukfires.org/probs/ontology/ProcessInput> <https://ukfires.org/probs/ontology/Flow> )
+
+SubObjectPropertyOf( <https://ukfires.org/probs/ontology/objectInferredDefinedBy> <https://ukfires.org/probs/ontology/objectDefinedBy> )
+
+SubClassOf( <https://ukfires.org/probs/ontology/Import> <https://ukfires.org/probs/ontology/Flow> )
+
+Declaration( ObjectProperty( <https://ukfires.org/probs/ontology/objectDefinedBy> ) )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/hasRole> <https://ukfires.org/probs/ontology/Role> )
+
+Declaration( DataProperty( <https://ukfires.org/probs/ontology/measurement> ) )
+
+FunctionalDataProperty( <https://ukfires.org/probs/ontology/measurement> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/metric> <https://ukfires.org/probs/ontology/Observation> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/produces> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/objectDefinedBy> <https://ukfires.org/probs/ontology/Object> )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/partOfDataset> <https://ukfires.org/probs/ontology/Observation> )
+
+DataPropertyRange( <https://ukfires.org/probs/ontology/objectDescription> xsd:string )
+
+ObjectPropertyDomain( <https://ukfires.org/probs/ontology/produces> <https://ukfires.org/probs/ontology/Process> )
+
+ObjectPropertyRange( <https://ukfires.org/probs/ontology/hasClassificationCode> <https://ukfires.org/probs/ontology/ClassificationCode> )
+
+)

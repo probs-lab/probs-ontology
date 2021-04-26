@@ -1,0 +1,54 @@
+:Object[?ObjectID] ,
+ufct:ClassificationCode[?CCID] ,
+[?ObjectID, :hasClassificationCode, ?CCID] ,
+[?ObjectID, :objectName, ?objectName] ,
+[?CCID, :codeName, ?Code] ,
+[?CCID, :codeDescription, ?Description] ,
+[?CCID, :belongsToList, ufct:Comtrade2017List]
+        :- ufrd:CT_2017(?Code, ?Description, ?Parent, ?Level) ,
+        BIND(IRI(CONCAT(STR(ufct2017:), "Object-", SHA256(?Code))) AS ?ObjectID) ,
+        BIND(IRI(CONCAT(STR(ufct2017:), "ClassificationCode-", SHA256(?Code))) AS ?CCID) ,
+        BIND(CONCAT("COMTRADE Object from Code ", ?Code) AS ?objectName) .
+
+# if ?Parent is not "absent"
+# TODO This seems to create "unnamed" parent objects?
+:Object[?ParentID] ,
+[?ParentID, :objectComposedOf, ?ObjectID]
+        :- ufrd:CT_2017(?Code, ?Description, ?Parent, ?Level) ,
+        BIND(IRI(CONCAT(STR(ufct2017:), "Object-", SHA256(?Code))) AS ?ObjectID) ,
+        BIND(IRI(CONCAT(STR(ufct2017:), "Object-", SHA256(?Parent))) AS ?ParentID) .
+
+:DirectObservation[?ID] ,
+[?ID, :objectDirectlyDefinedBy, ?CNCode] ,
+[?ID, :hasRegion, gnd:2635167] ,
+[?ID, :hasTimePeriod, :TimePeriod_YearOf2018] ,
+[?ID, :hasRole, :Import] ,
+[?ID, :partOfDataset, ufct:ct2018imports] ,
+[?ID, :metric, quantitykind:Mass]
+        :- ufrd:ct2018imports(?IDstring, ?CNCodestring, ?ImQNT, ?ImUnit),
+        BIND(IRI(CONCAT(STR(ufctd2018imports:), "Observation-", SHA256(?IDstring))) AS ?ID) ,
+        BIND(IRI(CONCAT(STR(ufct2017:), "Object-", SHA256(?CNCodestring))) AS ?CNCode) .
+
+# if ?ImQNT is not "absent"
+[?ID, :measurement, ?ImQNT] #,
+#[?ImUnit, :metric, ?metric] ,
+#[?ID, :metric, ?metric]
+        :- ufrd:ct2018imports(?IDstring, ?CNCodestring, ?ImQNT, ?ImUnit), FILTER(BOUND(?ImQNT)),
+        BIND(IRI(CONCAT(STR(ufctd2018imports:), "Observation-", SHA256(?IDstring))) AS ?ID) .
+
+# :DirectObservation[?ID] ,
+# [?ID, :objectDirectlyDefinedBy, ?CNCode] ,
+# [?ID, :hasRegion, gnd:2635167] ,
+# [?ID, :hasTimePeriod, :TimePeriod_YearOf2018] ,
+# [?ID, :hasRole, :Export] ,
+# [?ID, :partOfDataset, ufct:ct2018exports] ,
+# [?ID, :metric, quantitykind:Mass]
+#         :- ufrd:ct2018exports(?IDstring, ?CNCodestring, ?OutQNT, ?OutUnit),
+#         BIND(IRI(CONCAT(STR(ufctd2018exports:), "Observation-", SHA256(?IDstring))) AS ?ID) ,
+#         BIND(IRI(CONCAT(STR(ufct2017:), "Object-", SHA256(?CNCodestring))) AS ?CNCode) .
+# # if ?OutQNT is not "absent"
+# [?ID, :measurement, ?OutQNT] #,
+# #[?OutUnit, :metric, ?metric] ,
+# #[?ID, :metric, ?metric]
+#         :- ufrd:ct2018exports(?IDstring, ?CNCodestring, ?OutQNT, ?OutUnit), FILTER(BOUND(?OutQNT)),
+#         BIND(IRI(CONCAT(STR(ufctd2018exports:), "Observation-", SHA256(?IDstring))) AS ?ID) .

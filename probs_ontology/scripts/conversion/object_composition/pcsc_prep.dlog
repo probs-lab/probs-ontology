@@ -1,0 +1,12 @@
+
+ufu:NG(?O, ufu:modifiedTree, true) :- [?O, :objectComposedOf, ?O1].
+
+ufu:NG(?Obs, ufu:propsObs, ?S)
+    :-  [?Obs, a , :Observation] ,
+        [?Obs, :hasRole, ?Role] ,
+        [?Obs, :hasRegion, ?Region] ,
+        [?Obs, :hasTimePeriod, ?TimePeriod] ,
+        [?Obs, :metric, ?Metric] ,
+        rdfox:SKOLEM("propsObs", ?Role, ?Region, ?TimePeriod, ?Metric, ?S) .
+
+ufu:NG(?O, ufu:modifiedBranch, ?S) :- [?O, :objectComposedOf, ?O1] , [?Obs, :objectDefinedBy, ?O1] , ufu:NG(?Obs, ufu:propsObs, ?S) .

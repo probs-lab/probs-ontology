@@ -1,0 +1,6 @@
+
+clear rules-explicate-facts
+
+tupletable delete ufu:NG
+
+export "probs_data.nt.gz" "application/n-triples" fact-domain IDB

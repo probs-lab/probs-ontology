@@ -1,0 +1,4 @@
+:Object[?ObjectID] ,
+[?ObjectID, :hasValue, ?Value]
+        :- ufrd:simple(?Object, ?Value),
+        BIND(IRI(CONCAT(STR(simple:), "Object-", ?Object)) AS ?ObjectID) .

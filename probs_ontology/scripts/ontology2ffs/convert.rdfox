@@ -1,0 +1,2 @@
+
+export "probs.fss" "text/owl-functional" axiom-domain triples

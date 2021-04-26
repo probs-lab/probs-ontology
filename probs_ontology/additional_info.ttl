@@ -1,0 +1,98 @@
+
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix gnd: <https://sws.geonames.org/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+quantitykind:AmountOfSubstancePerUnitVolume a qudt:QuantityKind .
+quantitykind:ElectricPower a qudt:QuantityKind .
+quantitykind:Dimensionless a qudt:QuantityKind .
+quantitykind:MassAmountOfSubstance a qudt:QuantityKind .
+quantitykind:DRY-MASS a qudt:QuantityKind .
+quantitykind:Currency a qudt:QuantityKind .
+quantitykind:Energy a qudt:QuantityKind .
+quantitykind:AmountOfSubstance a qudt:QuantityKind .
+quantitykind:Length a qudt:QuantityKind .
+quantitykind:Mass a qudt:QuantityKind .
+quantitykind:Volume a qudt:QuantityKind .
+quantitykind:Area a qudt:QuantityKind .
+
+gnd:2648147 rdf:type owl:NamedIndividual , gn:Feature ;
+            gn:name "Great Britain" ;
+            gn:parentCountry gnd:2635167 .
+
+gnd:2635167 rdf:type owl:NamedIndividual , gn:Feature ;
+            gn:name "United Kingdom" .
+
+
+time:unitType
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "The temporal unit which provides the precision of a date-time value or scale of a temporal extent"@en ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          time:GeneralDateTimeDescription
+          time:Duration
+        ) ;
+    ] ;
+  rdfs:label "temporal unit type"@en ;
+  rdfs:range time:TemporalUnit ;
+.
+
+time:unitYear
+  rdf:type time:TemporalUnit ;
+  rdfs:label "Year (unit of temporal duration)"@en ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:weeks "0"^^xsd:decimal ;
+  time:years "1"^^xsd:decimal ;
+.
+
+time:year
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment """Year position in a calendar-clock system.
+
+The range of this property is not specified, so can be replaced by any specific representation of a calendar year from any calendar. """@en ;
+  rdfs:domain :GeneralDateTimeDescription ;
+  rdfs:label "year"@en ;
+.
+
+:TimePeriod_YearOf2018
+    rdf:type            owl:NamedIndividual , time:DateTimeDescription ;
+    time:unitType	time:unitYear ;
+    time:year		"2018"^^xsd:gYear ;
+    rdfs:label          "2018"@en ;
+    rdfs:comment        ""@en .
+
+:TimePeriod_YearOf2017
+    rdf:type            owl:NamedIndividual , time:DateTimeDescription ;
+    time:unitType	time:unitYear ;
+    time:year		"2017"^^xsd:gYear ;
+    rdfs:label          "2017"@en ;
+    rdfs:comment        ""@en .
+
+:TimePeriod_YearOf2016
+    rdf:type            owl:NamedIndividual , time:DateTimeDescription ;
+    time:unitType	time:unitYear ;
+    time:year		"2016"^^xsd:gYear ;
+    rdfs:label          "2016"@en ;
+    rdfs:comment        ""@en .
+
+:TimePeriod_YearOf2015
+    rdf:type            owl:NamedIndividual , time:DateTimeDescription ;
+    time:unitType	time:unitYear ;
+    time:year		"2015"^^xsd:gYear ;
+    rdfs:label          "2015"@en ;
+    rdfs:comment        ""@en .
+
+:TimePeriod_YearOf2014
+    rdf:type            owl:NamedIndividual , time:DateTimeDescription ;
+    time:unitType	time:unitYear ;
+    time:year		"2014"^^xsd:gYear ;
+    rdfs:label          "2014"@en ;
+    rdfs:comment        ""@en .

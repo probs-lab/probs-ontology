@@ -1,0 +1,39 @@
+
+ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O )
+    :-  [?Obs, :objectDefinedBy, ?O] , ufu:PCSC(?RO, ufu:objectComposedOf, ?O) ,
+        ufu:NG(?Obs, ufu:propsObs, ?S1) , ufu:NG(?RO, ufu:modifiedBranch, ?S2) , FILTER(?S1 = ?S2) .
+
+ufu:PCSC( ?Obs , ufu:hasRole , ?Role ) :- [?Obs, :hasRole, ?Role] , ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O ) .
+ufu:PCSC( ?Obs , ufu:hasRegion , ?R ) :- [?Obs, :hasRegion, ?R] , ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O ) .
+ufu:PCSC( ?Obs , ufu:hasTimePeriod , ?T ) :- [?Obs, :hasTimePeriod, ?T] , ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O ) .
+
+ufu:PCSC( ?Obs , ufu:measurement , ?M ) :- [?Obs, :measurement, ?M] , ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O ) .
+ufu:PCSC( ?Obs , ufu:metric , ?M ) :- [?Obs, :metric, ?M] , ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O ) .
+
+ufu:PCSC( ?Obs , ufu:EmptyMeasurement , true )
+    :-  ufu:PCSC( ?Obs , ufu:objectDefinedBy , ?O ) ,
+        NOT EXISTS ?M IN (ufu:PCSC(?Obs, ufu:measurement, ?M)) .
+
+ufu:PCSC( ?RO , ufu:containsRRT , ?S ) ,
+ufu:PCSC( ?O , ufu:hasRRT , ?S )
+    :-  ufu:PCSC( ?RO , ufu:objectComposedOf , ?O) ,
+        [?Obs, :objectDefinedBy, ?O] ,
+        ufu:NG(?Obs, ufu:propsObs, ?S) .
+
+ufu:PCSC( ?OID , ufu:notMatching , ?S )
+    :-  ufu:PCSC(?OID, ufu:ordering, ?O) ,
+        ufu:PCSC(?OID, ufu:root, ?RO) ,
+        ufu:PCSC(?RO, ufu:containsRRT, ?S) ,
+        NOT ufu:PCSC( ?O , ufu:hasRRT , ?S ) .
+
+ufu:PCSC( ?EObs , a , ufu:EmptyObservation ) ,
+ufu:PCSC( ?EObs , ufu:objectDefinedBy , ?O ) ,
+ufu:PCSC( ?EObs , ufu:hasRole , ?Role ) ,
+ufu:PCSC( ?EObs , ufu:hasRegion , ?Region ) ,
+ufu:PCSC( ?EObs , ufu:hasTimePeriod , ?TimePeriod ) ,
+ufu:PCSC( ?EObs , ufu:metric , ?Metric )
+    :-  ufu:PCSC(?OID, ufu:notMatching, ?S) ,
+        ufu:PCSC( ?OID , ufu:ordering , ?O) ,
+        ufu:PCSC( ?OID , ufu:root , ?RO) ,
+        rdfox:SKOLEM("propsObs", ?Role, ?Region, ?TimePeriod, ?Metric, ?S) ,
+        rdfox:SKOLEM("EmptyObservation", ?RO, ?O, ?Role, ?Region, ?TimePeriod, ?Metric, ?EObs) .

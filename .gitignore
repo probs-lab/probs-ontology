@@ -1,0 +1,8 @@
+.auctex-auto/
+/docs/_build/
+__pycache__
+/.direnv/
+/build/
+/dist/
+/probs_ontology.egg-info/
+/.doit.db.db

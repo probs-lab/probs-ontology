@@ -1,0 +1,12 @@
+
+ufu:PCSC( ?ObsID , ufu:objectInferredDefinedBy , ?RO ) ,
+ufu:PCSC( ?ObsID , ufu:hasRole , ?Role ) ,
+ufu:PCSC( ?ObsID , ufu:hasRegion , ?Region ) ,
+ufu:PCSC( ?ObsID , ufu:hasTimePeriod , ?TimePeriod ) ,
+ufu:PCSC( ?ObsID , ufu:measurement , ?MeasurementValue ) ,
+ufu:PCSC( ?ObsID , ufu:metric , ?Metric ) ,
+ufu:PCSC( ?ObsID , ufu:fromLeaf , ?LID )
+    :-  ufu:PCSC( ?LID , a , ufu:TreeLeaf ) , rdfox:SKOLEM("leaf", ?RO, ?S, ?MeasurementValue, ?LID) ,
+        rdfox:SKOLEM("propsObs", ?Role, ?Region, ?TimePeriod, ?Metric, ?S) ,
+        BIND(STRAFTER(STR(?RO), "/probs/ontology/") AS ?ROstr) ,
+        BIND(IRI(CONCAT(STR(:), "ComposedInferredObservation-", ?ROstr, "-", SHA256(CONCAT(STR(?Role),STR(?Region),STR(?TimePeriod),STR(?MeasurementValue))))) AS ?ObsID) .

@@ -1,0 +1,8 @@
+
+[?O, :objectEquivalentTo, ?O] :- [?O, a, :Object] . 
+
+[?Obs, :objectInferredDefinedBy, ?O1] ,
+[?Obs, prov:wasDerivedFrom, ?Obs]
+    :- [?O1, :objectEquivalentTo, ?O2], FILTER(?O1 != ?O2), 
+        [?Obs, :objectDefinedBy, ?O2], 
+        NOT [?Obs, :objectDirectlyDefinedBy, ?O1] . 

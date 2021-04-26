@@ -1,0 +1,22 @@
+
+tupletable create ufu:PCSC type triples
+
+import object_composition/pcsc_ordering.dlog
+
+clear rules-explicate-facts
+
+exec object_composition/pcsc_parallel_world
+
+clear rules-explicate-facts
+
+exec object_composition/pcsc_delete_contained
+
+import rules.dlog
+import "../probs.fss"
+import object_composition/pcsc_infer_real.dlog
+
+clear rules-explicate-facts
+
+tupletable delete ufu:PCSC
+
+compact

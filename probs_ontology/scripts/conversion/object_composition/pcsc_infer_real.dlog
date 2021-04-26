@@ -1,0 +1,23 @@
+
+[?Obs, :objectInferredDefinedBy, ?O] :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy , ?O) .
+[?Obs, :hasRole, ?Role]     :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:hasRole, ?Role) .
+[?Obs, :hasRegion, ?R]      :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:hasRegion, ?R) .
+[?Obs, :hasTimePeriod, ?T]  :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:hasTimePeriod, ?T) .
+[?Obs, :measurement, ?M]    :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:measurement, ?M) .
+[?Obs, :metric, ?M]         :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:metric, ?M) .
+[?Obs, prov:wasDerivedFrom, ?WDF]         :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:wasDerivedFrom, ?WDF) .
+
+[?Obs, :bound, :LowerBound]         :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), ufu:PCSC(?Obs, ufu:bound, :LowerBound) .
+[?Obs, :bound, :ExactBound]         :- ufu:PCSC(?Obs, ufu:objectInferredDefinedBy, ?O), NOT ufu:PCSC(?Obs, ufu:bound, :LowerBound) .
+
+
+ufu:NG(?Obs, ufu:propsObs, ?S)
+    :-  ufu:PCSC(?Obs, ufu:objectInferredDefinedBy , ?O) ,
+        ufu:PCSC(?Obs, ufu:hasRole, ?Role) ,
+        ufu:PCSC(?Obs, ufu:hasRegion, ?Region) ,
+        ufu:PCSC(?Obs, ufu:hasTimePeriod, ?TimePeriod) ,
+        ufu:PCSC(?Obs, ufu:metric, ?Metric) ,
+        rdfox:SKOLEM("propsObs", ?Role, ?Region, ?TimePeriod, ?Metric, ?S) .
+
+ufu:NG(?RO, ufu:modifiedBranch, ?S) :- [?RO, :objectComposedOf, ?O], [?Obs, :objectInferredDefinedBy, ?O] , ufu:NG(?Obs, ufu:propsObs, ?S) .
+ufu:NG(?RO, ufu:modifiedTree, true) :- ufu:NG(?RO, ufu:modifiedBranch, ?S) .

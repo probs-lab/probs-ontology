@@ -1,0 +1,16 @@
+prefix ufrd: <https://ukfires.org/probs/ontology/raw_data/>
+prefix simple: <https://ukfires.org/probs/ontology/data/simple/>
+
+dsource register delimitedFile "Simple"                          \
+    file    "$(dir.root)/data/sample_datasource_simple/data.csv"    \
+    header  true                                                \
+    quote   '"'
+
+tupletable create ufrd:simple                                   \
+    dataSourceName  "Simple"                                    \
+    "columns"       2                                           \
+    "1"             "{Object}"                                  \
+    "1.datatype"    "string"                                    \
+    "2"             "{Value}"                                   \
+    "2.datatype"    "xsd:double"                                \
+    "2.if-empty"    "absent"

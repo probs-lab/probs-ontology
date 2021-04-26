@@ -1,0 +1,10 @@
+
+dstore create default par-complex-nn 
+
+exec scripts/reasoning/init
+
+exec load_data
+
+import rules.dlog
+
+endpoint start

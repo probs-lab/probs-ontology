@@ -1,0 +1,19 @@
+
+import object_composition/pcsc_parallel_world_rules.dlog
+
+clear rules-explicate-facts
+
+import ! ufu:NG(?EObs, ufu:propsObs, ?S) :- ufu:PCSC( ?EObs , a , ufu:EmptyObservation ) , rdfox:SKOLEM("EmptyObservation", ?RO, ?O, ?Role, ?Region, ?TimePeriod, ?Metric, ?EObs) , rdfox:SKOLEM("propsObs", ?Role, ?Region, ?TimePeriod, ?Metric, ?S) .
+import ! ufu:NG(?O, ufu:modifiedBranch, ?S) :- ufu:PCSC( ?EObs , a , ufu:EmptyObservation ) , ufu:PCSC( ?EObs , ufu:objectDefinedBy , ?O1 ) , ufu:PCSC( ?O , ufu:objectComposedOf , ?O1) , ufu:NG(?EObs, ufu:propsObs, ?S) .
+
+import ! ufu:PCSC( ?NID , ufu:treeOf , ?O ) , ufu:PCSC( ?NID , ufu:position , 0 ) :-  ufu:PCSC(?Any, ufu:root, ?O) , rdfox:SKOLEM("root-node", ?O, ?NID) .
+
+clear rules-explicate-facts
+
+import object_composition/pcsc_tree_rules.dlog
+
+clear rules-explicate-facts
+
+import object_composition/pcsc_infer_observations.dlog
+
+import object_composition/pcsc_wdf.dlog
