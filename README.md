@@ -1,5 +1,7 @@
 # PRObs ontology
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5052738.svg)](https://doi.org/10.5281/zenodo.5052738)
+
 This repository contains the "Physical Resources Observatory" (PRObs) ontology. It includes both the concepts and relations as an OWL ontology, Datalog rules, and scripts designed to be run with  the [RDFox triple store](https://www.oxfordsemantic.tech/product). 
 
 This ontology is being developed as part of [UK FIRES](https://ukfires.org).
