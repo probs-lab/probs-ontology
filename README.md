@@ -26,4 +26,6 @@ See [DEVELOPING.md](DEVELOPING.md) for more information
 
 ## License
 
-The PRObs ontology is licensed with the **TODO license**
+The PRObs ontology is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+The Python code is licensed under the [MIT License](probs_ontology/runner/LICENSE).
