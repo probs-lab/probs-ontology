@@ -4,7 +4,6 @@
 
 - `docs` contains the documentation for the ontology.
 - `probs_ontology` contains the actual ontology, rules and scripts.
-- `probs_ontology/runner` contains Python code for setting up RDFox scripts.
 - `tests` contains the tests.
 
 ## Documentation

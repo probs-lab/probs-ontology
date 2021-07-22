@@ -5,7 +5,7 @@ from uuid import uuid4
 from pathlib import Path
 import pytest
 
-from probs_ontology import ProbsFacts
+from probs_runner import ProbsFacts
 
 
 def pytest_addoption(parser):

@@ -6,3 +6,4 @@ __pycache__
 /dist/
 /probs_ontology.egg-info/
 /.doit.db.db
+.DS_Store

@@ -3,7 +3,7 @@
 from decimal import Decimal
 import pytest
 
-from probs_ontology import PROBS
+from probs_runner import PROBS
 
 
 # These are the sample objects we will test

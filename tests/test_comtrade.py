@@ -7,7 +7,7 @@ import pytest
 import csv
 from io import StringIO
 
-from probs_ontology import Datasource, load_datasource, PROBS
+from probs_runner import load_datasource
 
 
 def limit_to_rows_matching_prefix(infile, outfile, column, prefix):
