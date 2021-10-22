@@ -15,7 +15,7 @@
     - file: provenance
     - file: classification_codes
 
-- part: Inferring new Observations
+- part: Automatic Knowledge Completion
   chapters:
     - file: reasoning/intro
 
