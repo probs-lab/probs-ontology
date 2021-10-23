@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Germano"
+  given-names: "Stefano"
+  orcid: "https://orcid.org/0000-0001-6993-0618"
+- family-names: "Saunders"
+  given-names: "Carla"
+  orcid: "https://orcid.org/0000-0001-6699-2848"
+- family-names: "Horrocks"
+  given-names: "Ian"
+  orcid: "https://orcid.org/0000-0002-2685-7462"
+- family-names: "Lupton"
+  given-names: "Rick"
+  orcid: "https://orcid.org/0000-0001-8622-3085"
+title: "Physical Resources Observatory (PRObs) ontology"
+version: 1.5.2
+doi: 10.5281/zenodo.5052739
+date-released: 2021-07-01
+url: "https://github.com/ukfires/probs-ontology"
