@@ -3,6 +3,8 @@
 
 title: PRObs Ontology
 author: Stefano Germano, Carla Saunders and Rick Lupton
+copyright: "2019-2021"
+logo: logo.png
 
 parse:
   myst_enable_extensions:
@@ -37,6 +39,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  favicon: "favicon.png"
 
 bibtex_bibfiles:
   - references.bib
