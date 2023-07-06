@@ -1,24 +1,18 @@
-@prefix :       	<https://ukfires.org/probs/ontology/> .
-@prefix ufpc:   	<https://ukfires.org/probs/ontology/prodcom/> .
-@prefix ufct:   	<https://ukfires.org/probs/ontology/comtrade/> .
-@prefix beis:   	<https://ukfires.org/probs/ontology/beis/> .
-@prefix cc:     	<http://creativecommons.org/ns#> .
-@prefix dc:     	<http://purl.org/dc/elements/1.1/> .
-@prefix gn:     	<http://www.geonames.org/ontology#> .
-@prefix gnd:        <https://sws.geonames.org/> .
-@prefix owl:    	<http://www.w3.org/2002/07/owl#> .
-@prefix prov:   	<http://www.w3.org/ns/prov#> .
-@prefix quantitykind:	<http://qudt.org/vocab/quantitykind/> .
-@prefix qudt:		<http://qudt.org/schema/qudt/> .
-@prefix rdf:    	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   	<http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time:		<http://www.w3.org/2006/time#> .
-@prefix vann:   	<http://purl.org/vocab/vann/> .
-@prefix xml:    	<http://www.w3.org/XML/1998/namespace> .
-@prefix xsd:    	<http://www.w3.org/2001/XMLSchema#> .
-@base           	<https://ukfires.org/probs/ontology> .
+# BASE         <http://w3id.org/probs-lab/ontology/>
+PREFIX :     <http://w3id.org/probs-lab/ontology/>
+PREFIX cc:   <http://creativecommons.org/ns#>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+PREFIX gn:   <http://www.geonames.org/ontology#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-<https://ukfires.org/probs/ontology>
+<http://w3id.org/probs-lab/ontology>
     rdf:type            owl:Ontology ;
 
     rdfs:label          "Physical Resources Observatory (PRObs) Ontology"@en ;
@@ -27,10 +21,10 @@
     rdfs:comment        "The ontology describes entities useful for the development of the Physical Resources Observatory (PRObs) data integration system"@en ;
     dc:description      "The ontology describes entities useful for the development of the Physical Resources Observatory (PRObs) data integration system"@en ;
 
-    owl:versionIRI      <https://ukfires.org/probs/ontology-1.5.2> ;
-    owl:versionInfo     "1.5.2" ;
+    owl:versionIRI      <http://w3id.org/probs-lab/ontology-2.0.0> ;
+    owl:versionInfo     "2.0.0" ;
     dc:issued           "2020-10-02" ;
-    dc:modified         "2021-04-16" ;
+    dc:modified         "2023-01-27" ;
 
     dc:creator          "UK FIRES partners"@en ;
 
@@ -39,9 +33,9 @@
     dc:contributor      "Carla Saunders" ;
 
     vann:preferredNamespacePrefix   "uf" ;
-    vann:preferredNamespaceUri      "https://ukfires.org/probs/ontology" ;
+    vann:preferredNamespaceUri      "http://w3id.org/probs-lab/ontology" ;
 
-    cc:licence          <https://creativecommons.org/licenses/by/4.0> .
+    cc:license          <https://creativecommons.org/licenses/by/4.0> .
 
 
 #################################################################
@@ -51,7 +45,7 @@
 :objectComposedOf
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "object composed of"@en ;
-    rdfs:comment        "Relation which connects an Object to sub-objects lower in the hierarchy"@en ;
+    rdfs:comment        "Relation which connects an Object to the sub-Objects lower in the hierarchy, which collectively exhaustively describe the same things."@en ;
     rdfs:domain         :Object ;
     rdfs:range          :Object .
 
@@ -62,16 +56,16 @@
     rdf:type            owl:SymmetricProperty ;
     rdf:type            owl:TransitiveProperty ;
     rdfs:label          "object equivalent to"@en ;
-    rdfs:comment        "Relation which connects two Objects which describe exacly the same thing. Example: Cement :objectEquivalentTo CementInCOMTRADE"@en ;
+    rdfs:comment        "Relation which connects two Objects which describe exacly the same thing. Example: Cement :objectEquivalentTo CementInCOMTRADE."@en ;
     rdfs:domain         :Object ;
     rdfs:range          :Object .
 
 
-:belongsToList
+:partOfList
     rdf:type            owl:ObjectProperty ;
     rdf:type            owl:FunctionalProperty ;
-    rdfs:label          "belongs to list"@en ;
-    rdfs:comment        "Each ClassificationCode belongs to a ClassificationCodeList. Example: 10.11.11.40 :belongsToList 2017PRODCOMlist"@en ;
+    rdfs:label          "part of list"@en ;
+    rdfs:comment        "Each ClassificationCode belongs to a ClassificationCodeList. Example: 10.11.11.40 :partOfList 2017PRODCOMlist"@en ;
     rdfs:domain         :ClassificationCode ;
     rdfs:range          :ClassificationCodeList .
 
@@ -79,7 +73,7 @@
 :hasClassificationCode
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "has classification code"@en ;
-    rdfs:comment        "Links an Object to the ClassificationCode which describes it. Example: Object10.11.11.40 :hasClassificationCode 10.11.11.40 "@en ;
+    rdfs:comment        "Links an Object to the ClassificationCode which describes it. Example: Object10.11.11.40 :hasClassificationCode 10.11.11.40."@en ;
     rdfs:domain         :Object ;
     rdfs:range          :ClassificationCode .
 
@@ -87,7 +81,7 @@
 :objectDefinedBy
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "object defined by"@en ;
-    rdfs:comment        "Link Observations to the Object they describe"@en ;
+    rdfs:comment        "Links an Observation to the Object it describes."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          :Object .
 
@@ -96,7 +90,7 @@
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :objectDefinedBy ;
     rdfs:label          "object directly defined by"@en ;
-    rdfs:comment        "Link direct Observations to the Object they describe"@en ;
+    rdfs:comment        "Links a direct Observation to the Object it describes."@en ;
     rdfs:domain         :DirectObservation ;
     rdfs:range          :Object .
 
@@ -105,7 +99,7 @@
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :objectDefinedBy ;
     rdfs:label          "object inferred defined by"@en ;
-    rdfs:comment        "Link inferred Observations to the Object they describe"@en ;
+    rdfs:comment        "Links an inferred Observation to the Object it describes."@en ;
     rdfs:domain         :InferredObservation ;
     rdfs:range          :Object .
 
@@ -113,15 +107,34 @@
 :processDefinedBy
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "process defined by"@en ;
-    rdfs:comment        "Link Observations to the Process they describe"@en ;
+    rdfs:comment        "Links an Observation to the Process it describes."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          :Process .
+
+
+:processDirectlyDefinedBy
+    rdf:type            owl:ObjectProperty ;
+    rdfs:subPropertyOf  :processDefinedBy ;
+    rdfs:label          "process directly defined by"@en ;
+    rdfs:comment        "Links a direct Observation to the Process it describes."@en ;
+    rdfs:domain         :DirectObservation ;
+    rdfs:range          :Process .
+
+
+:processInferredDefinedBy
+    rdf:type            owl:ObjectProperty ;
+    rdfs:subPropertyOf  :processDefinedBy ;
+    rdfs:label          "process inferred defined by"@en ;
+    rdfs:comment        "Links an inferred Observation to the Process it describes."@en ;
+    rdfs:domain         :InferredObservation ;
+    rdfs:range          :Process .
+
 
 :hasTimePeriod
     rdf:type            owl:ObjectProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "has time period"@en ;
-    rdfs:comment        "Links Observation to the TimePeriod in which it was measured"@en ;
+    rdfs:comment        "Links an Observation to the TimePeriod in which it was measured."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          time:DateTimeDescription .
 
@@ -129,7 +142,7 @@
     rdf:type            owl:ObjectProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "has region"@en ;
-    rdfs:comment        "Links Observation to the Region in which it was measured"@en ;
+    rdfs:comment        "Links an Observation to the Region in which it was measured."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          gn:Feature .
 
@@ -138,7 +151,7 @@
     rdf:type            owl:ObjectProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "part of dataset"@en ;
-    rdfs:comment        "Links Observation to the Dataset it is a part of"@en ;
+    rdfs:comment        "Links an Observation to the Dataset it is a part of."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          :Dataset .
 
@@ -146,7 +159,7 @@
 :processComposedOf
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "process composed of"@en ;
-    rdfs:comment        "Relation which connects an Process to sub-processes lower in the hierarchy"@en ;
+    rdfs:comment        "Relation which connects a Process to the sub-Processes lower in the hierarchy, which collectively exhaustively describe the same activities."@en ;
     rdfs:domain         :Process ;
     rdfs:range          :Process .
 
@@ -164,7 +177,7 @@
 :hasRole
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "has role"@en ;
-    rdfs:comment        "Links an observation to the type of data represented by it"@en ;
+    rdfs:comment        "Links an Observation to the type of data represented by it."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          :Role .
 
@@ -172,7 +185,7 @@
 :consumes
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "consumes"@en ;
-    rdfs:comment        "What object process consumes (i.e., the input of a process)"@en ;
+    rdfs:comment        "Describes that an Object is an input to a Process."@en ;
     rdfs:domain         :Process ;
     rdfs:range          :Object .
 
@@ -180,22 +193,22 @@
 :produces
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "produces"@en ;
-    rdfs:comment        "What object process produces (i.e., the output of a process)"@en ;
+    rdfs:comment        "Describes that an Object is an output of a Process."@en ;
     rdfs:domain         :Process ;
     rdfs:range          :Object .
 
-:metric
+:hasMetric
     rdf:type            owl:ObjectProperty ;
-    rdfs:label          "metric"@en ;
-    rdfs:comment        "The way in which a measurement is quantified."@en ;
+    rdfs:label          "has metric"@en ;
+    rdfs:comment        "The way in which a measurement is quantified (e.g. by mass, or by volume)."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          qudt:QuantityKind .
 
 
-:bound
+:hasBound
     rdf:type            owl:ObjectProperty ;
-    rdfs:label          ""@en ;
-    rdfs:comment        ""@en ;
+    rdfs:label          "has bound"@en ;
+    rdfs:comment        "Specifies the type of constraint that the Observation represents (exact/lower/upper bound)."@en ;
     rdfs:domain         :Observation ;
     rdfs:range          :MeasurementBound .
 
@@ -204,30 +217,12 @@
 #    Data properties
 #################################################################
 
-:objectName
-    rdf:type            owl:DatatypeProperty ;
-    rdf:type            owl:FunctionalProperty ;
-    rdfs:label          "object name"@en ;
-    rdfs:comment        "Links an Object to its human-readable name"@en ;
-    rdfs:domain         :Object ;
-    rdfs:range          xsd:string .
-
-
 :objectDescription
     rdf:type            owl:DatatypeProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "object description"@en ;
-    rdfs:comment        "Links an Object to a human-readble description of that Object"@en ;
+    rdfs:comment        "Links an Object to a human-readable description of that Object."@en ;
     rdfs:domain         :Object ;
-    rdfs:range          xsd:string .
-
-
-:processName
-    rdf:type            owl:DatatypeProperty ;
-    rdf:type            owl:FunctionalProperty ;
-    rdfs:label          "process name"@en ;
-    rdfs:comment        "Links a Process to its human-readable name"@en ;
-    rdfs:domain         :Process ;
     rdfs:range          xsd:string .
 
 
@@ -235,17 +230,8 @@
     rdf:type            owl:DatatypeProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "process description"@en ;
-    rdfs:comment        "Links a Process to a human-readble description of that Object"@en ;
+    rdfs:comment        "Links a Process to a human-readable description of that Object"@en ;
     rdfs:domain         :Process ;
-    rdfs:range          xsd:string .
-
-
-:codeName
-    rdf:type            owl:DatatypeProperty ;
-    rdf:type            owl:FunctionalProperty ;
-    rdfs:label          "code name"@en ;
-    rdfs:comment        "Links a ClassificationCode to its human-readable version"@en ;
-    rdfs:domain         :ClassificationCode ;
     rdfs:range          xsd:string .
 
 
@@ -253,7 +239,7 @@
     rdf:type            owl:DatatypeProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "code description"@en ;
-    rdfs:comment        "Links a ClassificationCode to a human-readable description of that Object, usually defined by the body which maintains the ClassificationCodeList"@en ;
+    rdfs:comment        "Links a ClassificationCode to a human-readable description, usually defined by the body which maintains the ClassificationCodeList."@en ;
     rdfs:domain         :ClassificationCode ;
     rdfs:range          xsd:string .
 
@@ -266,13 +252,6 @@
     rdfs:domain         :Observation ;
     rdfs:range          xsd:decimal .
 
-:metricName
-    rdf:type            owl:DatatypeProperty ;
-    rdf:type            owl:FunctionalProperty ;
-    rdfs:label          "metric name"@en ;
-    rdfs:comment        "Links a Metric to its human-readable version"@en ;
-    rdfs:domain         qudt:QuantityKind ;
-    rdfs:range          xsd:string .
 
 #################################################################
 #    Classes
@@ -289,7 +268,7 @@
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Object ;
     rdfs:label          "ReferenceObject"@en ;
-    rdfs:comment        ""@en .
+    rdfs:comment        "A ReferenceObject is an Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en .
 
 
 :ClassificationCode
@@ -298,141 +277,126 @@
     rdfs:comment        "A label within a ClassificationCodeList. Example: 10.11.11.40 in the 2017-18 PRODCOM list."@en .
 
 
-ufpc:ClassificationCode
-    rdf:type            owl:Class ;
-    rdfs:subClassOf     :ClassificationCode ;
-    rdfs:label          "PRODCOM classification code"@en ;
-    rdfs:comment        "A label within a PRODCOM ClassificationCodeList"@en .
-
-ufct:ClassificationCode
-    rdf:type            owl:Class ;
-    rdfs:subClassOf     :ClassificationCode ;
-    rdfs:label          "COMTRADE classification code"@en ;
-    rdfs:comment        "A label within a COMTRADE ClassificationCodeList."@en .
-
-
 :ClassificationCodeList
     rdf:type            owl:Class ;
     rdfs:label          "Classification code list"@en ;
     rdfs:comment        "A set of ClassificationCodes. Example: the 2017-18 PRODCOM list or the 2018 HS classification."@en .
 
 
-ufpc:ClassificationCodeList
-    rdf:type            owl:Class ;
-    rdfs:subClassOf     :ClassificationCodeList ;
-    rdfs:label          "PRODCOM classification code list"@en ;
-    rdfs:comment        "A set of PRODCOM ClassificationCodes, usually from a specific year. Example: the 2017-18 PRODCOM list."@en .
-
-ufct:ClassificationCodeList
-    rdf:type            owl:Class ;
-    rdfs:subClassOf     :ClassificationCodeList ;
-    rdfs:label          "COMTRADE classification code list"@en ;
-    rdfs:comment        "A set of COMTRADE ClassificationCodes, usually from a specific year. Example: the 2018 HS classification."@en .
-
-
 :Observation
     rdf:type            owl:Class ;
     rdfs:subClassOf     prov:Entity ;
     rdfs:label          "Observation"@en ;
-    rdfs:comment        "One set of observed data. At minimum the set of Object, Measurement and Dataset, preferably TimePeriod, and Region."@en .
+    rdfs:comment        "One piece of observed data."@en .
 
 
 :Role
     rdf:type            owl:Class ;
     rdfs:label          "Role"@en ;
-    rdfs:comment        "Type of data represented by the Observation"@en .
+    rdfs:comment        "Type of data represented by the Observation."@en .
 
 
 :Flow
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Role ;
     rdfs:label          "Flow"@en ;
-    rdfs:comment        "The Flow of an Object between processes or across Regions"@en .
+    rdfs:comment        "A Flow represents the measurement of a movement of Objects across Process boundaries or between Regions."@en .
 
 
 :SoldProduction
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Flow ;
     rdfs:label          "Sold production"@en ;
-    rdfs:comment        "Defined by PRODCOM, as opposed to the goods that may have been produced within the factory boundary, but haven't yet left the factory gate."@en .
+    rdfs:comment        "A Flow which measures the total sold production of an Object. Defined by PRODCOM to exclude the goods that may have been produced within the factory boundary, but haven't yet left the factory gate."@en .
 
 
 :Import
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Flow ;
     rdfs:label          "Import"@en ;
-    rdfs:comment        "A Flow which describes the Flow of an Object into the Region of interest"@en .
+    rdfs:comment        "A Flow which measures the quantity of an Object entering a Region."@en .
 
 
 :Export
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Flow ;
     rdfs:label          "Export"@en ;
-    rdfs:comment        "A Flow which describes the Flow of an Object out of the Region of interest"@en .
+    rdfs:comment        "A Flow which measures the quantity of an Object leaving a Region."@en .
 
 
 :ProcessInput
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Flow ;
     rdfs:label          "Process input"@en ;
-    rdfs:comment        "The input to a Process"@en .
+    rdfs:comment        "A Flow which measures the input of a specific Object into a Process."@en .
 
 
 :ProcessOutput
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Flow ;
     rdfs:label          "Process output observation"@en ;
-    rdfs:comment        "The output from a Process"@en .
+    rdfs:comment        "A Flow which describes the output of a specific Object from a Process."@en .
 
 
 :Stock
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Role ;
     rdfs:label          "Stock"@en ;
-    rdfs:comment        "The accumulation of a Stock of an Object"@en .
+    rdfs:comment        "A Stock represents the measurement of the accumulation of an Object within a Process."@en .
 
 
 :DirectObservation
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Observation ;
     rdfs:label          "Direct observation"@en ;
-    rdfs:comment        "An Observation directly derived from the data"@en .
+    rdfs:comment        "An Observation directly derived from data."@en .
 
 
 :InferredObservation
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Observation ;
     rdfs:label          "Inferred observation"@en ;
-    rdfs:comment        "An Observation inferred from other Observations"@en .
+    rdfs:comment        "An Observation inferred from other Observations."@en .
 
 
 :Process
     rdf:type            owl:Class ;
     rdfs:label          "Process"@en ;
-    rdfs:comment        "One or more grouped operations in a system that can be defined and separated from others. A Process has an input of some Object(s) and an output of some Object(s)"@en .
+    rdfs:comment        "One or more grouped operations in a system that can be defined and separated from others. A Process has an input of some Object(s) and an output of some Object(s)."@en .
 
 
 :Dataset
     rdf:type            owl:Class ;
     rdfs:label          "Dataset"@en ;
-    rdfs:comment        "A collection of observations. Example: the 2018 PRODCOM dataset."@en .
+    rdfs:comment        "A collection of Observations. Example: the 2018 PRODCOM dataset."@en .
 
 :MeasurementBound
     rdf:type            owl:Class ;
-    rdfs:label          ""@en ;
-    rdfs:comment        ""@en .
+    rdfs:label          "Measurement bound"@en ;
+    rdfs:comment        "The type of constraint that the Observation represents (exact/lower/upper bound)."@en .
 
 :LowerBound
     rdf:type            owl:NamedIndividual , :MeasurementBound ;
-    rdfs:label          ""@en ;
-    rdfs:comment        ""@en .
+    rdfs:label          "Lower bound"@en ;
+    rdfs:comment        "When an Observation has a LowerBound bound, it states that the true value is at least as great as the Observation's measurement."@en .
 
 :UpperBound
     rdf:type            owl:NamedIndividual , :MeasurementBound ;
-    rdfs:label          ""@en ;
-    rdfs:comment        ""@en .
+    rdfs:label          "Upper bound"@en ;
+    rdfs:comment        "When an Observation has an UpperBound bound, it states that the true value is at most as great as the Observation's measurement."@en .
 
 :ExactBound
     rdf:type            owl:NamedIndividual , :MeasurementBound ;
-    rdfs:label          ""@en ;
-    rdfs:comment        ""@en .
+    rdfs:label          "Exact bound"@en ;
+    rdfs:comment        "When an Observation has an ExactBound bound, it states that the true value is equal to the Observation's measurement."@en .
+
+ [] rdf:type            owl:AllDisjointClasses ;
+    owl:members         (
+                            :ClassificationCode
+                            :Dataset
+                            :MeasurementBound
+                            :Object
+                            :Observation
+                            :Process
+                            :Role
+                        ) .
