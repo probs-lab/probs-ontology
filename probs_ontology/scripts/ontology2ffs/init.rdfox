@@ -1,8 +1,0 @@
-set dir.facts "$(dir.root)"
-set dir.scripts "$(dir.root)/scripts/ontology2ffs"
-
-dstore create default par-complex-nn owl-in-rdf-support strict
-
-set output out
-
-import "probs.ttl"

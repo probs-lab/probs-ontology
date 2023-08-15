@@ -1,0 +1,18 @@
+name: probs-ontology
+channels: [conda-forge, nodefaults]
+dependencies:
+  - python=3.10.*
+  - doit=0.36.*
+  - rdflib=6.*
+  - pytest=7.*
+  - pip=23.*
+  - pip:
+      - build
+      - https://github.com/probs-lab/probs-runner/archive/40adf5254375f4517cc1688db2b730f407b9aa33.zip#egg=probs-runner
+
+# [options.extras_require]
+# test=
+#   pytest
+#   probs_runner
+# docs=
+#   jupyter-book >=0.10,<0.11
