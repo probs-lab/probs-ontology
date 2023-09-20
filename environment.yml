@@ -1,19 +1,11 @@
 name: probs-ontology
 channels: [conda-forge, nodefaults]
 dependencies:
-  - python=3.10.*
-  - doit=0.36.*
-  - rdflib=6.*
-  - pytest=7.*
+  - python=3.11.*
   - pip=23.*
-  - jupyter-book
+  - jupyter-book=0.15.*
   - pip:
       - build
-      - https://github.com/probs-lab/probs-runner/archive/40adf5254375f4517cc1688db2b730f407b9aa33.zip#egg=probs-runner
-
-# [options.extras_require]
-# test=
-#   pytest
-#   probs_runner
-# docs=
-#   jupyter-book >=0.10,<0.11
+      - probs-runner==2.0.0a2
+      - probs_module_ontology_conversion==2.0.0a1
+      - rdfox==6.3.1
