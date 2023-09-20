@@ -1,8 +1,8 @@
 [project]
 # This is the name of the Python distribution, for consistency with the other
 # modules which supply files in the "probs_system" namespace.
-name = "probs-module-ontology"
-version = "2.0.0"
+name = "probs_module_ontology"
+version = "2.0.0a1"
 description = "Ontology files for the PRObs ontology"
 authors = [
     {name = "Stefano Germano"},

@@ -2,10 +2,10 @@
 /docs/_build/
 __pycache__
 /.direnv/
-/build/
-/dist/
-/probs_ontology.egg-info/
-/.doit.db.db
+/conversion/build/
+/conversion/dist/
+/conversion/data/
+/*.egg-info/
+.doit.db.db
 .DS_Store
-/probs_module_ontology.egg-info/
-/data
+*.egg-info/

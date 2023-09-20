@@ -1,0 +1,54 @@
+PREFIX : <http://w3id.org/probs-lab/ontology#>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+# time:TemporalEntity (needed for :hasTime)
+#   time:hasTemporalDuration (Range: time:TemporalDuration)
+#     time:unitYear (individual member of time:TemporalUnit (Subclass of: time:TemporalDuration))
+#   time:hasBeginning (Range: time:Instant)
+#     [time:inXSDgYear YEAR]
+#     or [time:inXSDDateTimeStamp START]
+#   time:hasEnd (Range: time:Instant)
+#     [time:inXSDgYear YEAR]
+#     or [time:inXSDDateTimeStamp END]
+
+:TimePeriod_YearOf2014
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2014"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2014"^^xsd:gYear] .
+
+:TimePeriod_YearOf2015
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2015"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2015"^^xsd:gYear] .
+
+:TimePeriod_YearOf2016
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2016"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2016"^^xsd:gYear] .
+
+:TimePeriod_YearOf2017
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2017"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2017"^^xsd:gYear] .
+
+:TimePeriod_YearOf2018
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2018"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2018"^^xsd:gYear] .
+
+:TimePeriod_YearOf2019
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2019"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2019"^^xsd:gYear] .
+
+:TimePeriod_YearOf2020
+    rdf:type                    owl:NamedIndividual , time:TemporalEntity ;
+    time:hasTemporalDuration    time:unitYear ;
+    time:hasBeginning           [time:inXSDgYear "2020"^^xsd:gYear] ;
+    time:hasEnd                 [time:inXSDgYear "2020"^^xsd:gYear] .

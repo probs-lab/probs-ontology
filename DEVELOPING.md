@@ -3,45 +3,47 @@
 ## Repository structure
 
 - `docs` contains the documentation for the ontology.
-- `probs_ontology` contains the actual ontology, rules and scripts.
-- `tests` contains the tests.
+- `ontology` contains the actual ontology definitions.
+- `spec` contains generated documentation.
+- `conversion` contains scripts and additional ontologies that are convenient to bundle with the PRObs ontology for further processing/reasoning.
 
 ## Documentation
 
 Documentation is written using [jupyter-book](https://jupyterbook.org).
 
-Install the Python package in a virtual environment with the necessary dependencies:
+You can create a Conda environment with the necessary tools installed using:
 
 ```shell
-pip install -e '.[docs]'
+conda env create
+conda activate probs-ontology
 ```
+
+Additional documentation is generated from the ontology definitions in the
+`spec` folder.
 
 ## Releases
 
 To release a new version of the ontology:
 
-- Ensure tests are passing, documentation and changelog is up to date.
+- Ensure documentation and changelog are up to date.
 
 - Bump the version number according to [semantic versioning](https://semver.org/), based on the type of changes made since the last release.
 
 - Commit the new version and tag a release like "v0.1.2"
 
-- Build the package: `python setup.py sdist bdist_wheel`
+To create a converted/bundled ontology, ready for use with the PRObs system scripts (e.g. `kbc-completion` and `endpoint`):
 
-- Publish the package to PyPI: `twine upload dist/probs_ontology-[...]`
+- Change to the `conversion` folder
 
-## Tests
+- Convert/bundle the ontology with any additional data/ontologies: `python convert_ontology.py [PATH TO ADDITIONAL ONTOLOGIES]`
+  - For example, `python convert_ontology.py additional_ontologies/*`
 
-Install the Python package in a virtual environment:
+- The converted files are in `conversion/data/probs_ontology_data.nt.gz` and `conversion/data/probs_ontology_rules.dlog`
 
-```shell
-pip install -e '.[test]'
-```
+To release a new version of the converted/bundled ontology as a module for use with probs-runner:
 
-Run the tests using pytest:
+- Change to the `conversion` folder
 
-```shell
-pytest
-```
+- Build the package: `python -m build`
 
-See [tests/README.md](tests/README.md) for more details of how to use the test runner.
+- Publish the package to PyPI: `twine upload dist/probs_module_ontology-[...]`
