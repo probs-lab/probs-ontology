@@ -4,8 +4,3 @@ dependencies:
   - python=3.11.*
   - pip=23.*
   - jupyter-book=0.15.*
-  - pip:
-      - build
-      - probs-runner==2.0.0a2
-      - probs_module_ontology_conversion==2.0.0a1
-      - rdfox==6.3.1
