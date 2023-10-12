@@ -27,7 +27,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdfs:comment        "The ontology describes entities useful for the development of the Physical Resources Observatory (PRObs) data integration system."@en ;
     dc:description      "The ontology describes entities useful for the development of the Physical Resources Observatory (PRObs) data integration system."@en ;
 
-    dc:abstract         "FIXME Similar to a description, but with a little bit more background and an explanation about the resued/extended vocabularies, context and applications using this ontology. It can be considered as the abstract of the paper describing you ontology."@en ;
+    dc:abstract         "Information about energy and material production and consumption is important for understanding issues such as decarbonisation of industry, recycling, and waste management. The Physical Resources Observatory (PRObs) ontology defines entities useful for describing and integrating this type of data. It reuses existing vocabularies for provenance (PROV), measurements (QUDT), time (OWL Time) and spatial regions (Geonames). It can be used to describe existing data, and as a basis to compute derived data aggregated according to different hierarchies."@en ;
 
     owl:versionIRI      <http://w3id.org/probs-lab/ontology-2.0.0> ;
     owl:versionInfo     "2.0.0" ;
