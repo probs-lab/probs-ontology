@@ -1,0 +1,27 @@
+<h2 id="desc" class="list">
+    Physical Resources Observatory (PRObs) Ontology: Description
+    <span class="backlink">
+        back to <a href="#toc">ToC</a>
+    </span>
+</h2>
+
+<p>
+    The data model proposed [<a href="#ref-1">1</a>] describes three components of a data point: value, metadata, and "system location".
+    The value can be a simple numerical value with associated physical units, or could account for uncertain values by defining probability distributions or bounds.
+    The metadata includes provenance information.
+    The system location is the component specific to MEFA: it associates the data point with its context.
+</p>
+
+<p>
+    To represent this, we introduce the concept of an <em>Observation</em> to represent an individual data point and its value, linked to its system location.
+    We then introduce concepts describing types of materials/goods, and how they are related.
+    Full details are available below and in [<a href="#ref-2">2</a>].
+</p>
+
+<p>
+    It is worth noting that the ontology links to several external vocabularies:
+    <a href="http://www.w3.org/TR/prov-o">PROV</a> for data provenance,
+    <a href="http://qudt.org">QUDT</a> for physical units,
+    <a href="https://www.geonames.org/ontology">GeoNames</a> for spatial regions,
+    and <a href="https://www.w3.org/TR/owl-time">OWL-Time</a> for time.
+</p>

@@ -14,6 +14,9 @@ parts:
 - caption: Automatic Knowledge Completion
   chapters:
   - file: reasoning/intro
+- caption: Ontology reference
+  chapters:
+  - url: http://w3id.org/probs-lab/ontology
 - caption: Endmatter
   chapters:
   - file: references
