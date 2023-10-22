@@ -290,6 +290,12 @@
 # #################################################################
 # 
 # 
+# http://purl.obolibrary.org/obo/BFO_0000019
+<http://purl.obolibrary.org/obo/BFO_0000019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.obolibrary.org/obo/BFO_0000031
+<http://purl.obolibrary.org/obo/BFO_0000031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://qudt.org/schema/qudt/QuantityKind
 # 
 # http://w3id.org/probs-lab/ontology#ClassificationCode
@@ -342,11 +348,13 @@
 # 
 # http://w3id.org/probs-lab/ontology#MeasurementBound
 <http://w3id.org/probs-lab/ontology#MeasurementBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/probs-lab/ontology#MeasurementBound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000019> .
 <http://w3id.org/probs-lab/ontology#MeasurementBound> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of constraint that the Observation represents (exact/lower/upper bound)."@en .
 <http://w3id.org/probs-lab/ontology#MeasurementBound> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement bound"@en .
 # 
 # http://w3id.org/probs-lab/ontology#Object
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000031> .
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
 <http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services."@en .
@@ -354,12 +362,14 @@
 # 
 # http://w3id.org/probs-lab/ontology#Observation
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000031> .
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "One piece of observed data."@en .
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
 # 
 # http://w3id.org/probs-lab/ontology#Process
 <http://w3id.org/probs-lab/ontology#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/probs-lab/ontology#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000031> .
 <http://w3id.org/probs-lab/ontology#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more grouped operations in a system that can be defined and separated from others. A Process has an input of some Object(s) and an output of some Object(s)."@en .
 <http://w3id.org/probs-lab/ontology#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
 # 
@@ -383,6 +393,7 @@
 # 
 # http://w3id.org/probs-lab/ontology#Role
 <http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000019> .
 <http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of data represented by the Observation."@en .
 <http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
 # 

@@ -46,6 +46,12 @@
   "@id" : "http://creativecommons.org/ns#license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.obolibrary.org/obo/BFO_0000019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/BFO_0000031",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -295,6 +301,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Measurement bound"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
   } ]
 }, {
   "@id" : "http://w3id.org/probs-lab/ontology#Object",
@@ -308,6 +317,8 @@
     "@value" : "Object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000031"
+  }, {
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
@@ -322,6 +333,8 @@
     "@value" : "Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000031"
+  }, {
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
@@ -334,6 +347,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000031"
   } ]
 }, {
   "@id" : "http://w3id.org/probs-lab/ontology#ProcessInput",
@@ -387,6 +403,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
   } ]
 }, {
   "@id" : "http://w3id.org/probs-lab/ontology#SoldProduction",

@@ -497,6 +497,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
     <!-- http://qudt.org/schema/qudt/QuantityKind -->
 
 
@@ -596,6 +610,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#MeasurementBound">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:comment xml:lang="en">The type of constraint that the Observation represents (exact/lower/upper bound).</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement bound</rdfs:label>
     </owl:Class>
@@ -606,6 +621,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Object">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:comment xml:lang="en">What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services.</rdfs:comment>
         <rdfs:label xml:lang="en">Object</rdfs:label>
@@ -617,6 +633,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Observation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:comment xml:lang="en">One piece of observed data.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
@@ -628,6 +645,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Process">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:comment xml:lang="en">One or more grouped operations in a system that can be defined and separated from others. A Process has an input of some Object(s) and an output of some Object(s).</rdfs:comment>
         <rdfs:label xml:lang="en">Process</rdfs:label>
     </owl:Class>
@@ -671,6 +689,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:comment xml:lang="en">Type of data represented by the Observation.</rdfs:comment>
         <rdfs:label xml:lang="en">Role</rdfs:label>
     </owl:Class>

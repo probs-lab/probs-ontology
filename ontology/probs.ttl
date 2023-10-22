@@ -1,11 +1,10 @@
-# It does not work due to a bug in RDFox; uncomment it when solved
-# BASE            <http://w3id.org/probs-lab/ontology#>
 PREFIX :        <http://w3id.org/probs-lab/ontology#>
 PREFIX cc:      <http://creativecommons.org/ns#>
 PREFIX dc:      <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms:	<http://purl.org/dc/terms/>
 PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
 PREFIX gn:      <http://www.geonames.org/ontology#>
+PREFIX obo:     <http://purl.obolibrary.org/obo/>
 PREFIX org:     <http://www.w3.org/ns/org#>
 PREFIX owl:     <http://www.w3.org/2002/07/owl#>
 PREFIX prov:    <http://www.w3.org/ns/prov#>
@@ -141,13 +140,13 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdfs:range          :Process .
 
 
-:hasTimePeriod
+:hasTime
     rdf:type            owl:ObjectProperty ;
     rdf:type            owl:FunctionalProperty ;
     rdfs:label          "has time period"@en ;
-    rdfs:comment        "Links an Observation to the TimePeriod in which it was measured."@en ;
+    rdfs:comment        "Links an Observation to the Time in which it was measured."@en ;
     rdfs:domain         :Observation ;
-    rdfs:range          time:DateTimeDescription .
+    rdfs:range          time:TemporalEntity .
 
 
 :hasRegion
@@ -273,7 +272,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 :Object
     rdf:type            owl:Class ;
-    rdfs:subClassOf     prov:Entity ;
+    rdfs:subClassOf     prov:Entity, obo:BFO_0000031 ;
     rdfs:label          "Object"@en ;
     rdfs:comment        "What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services."@en .
 
@@ -301,6 +300,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 :Observation
     rdf:type            owl:Class ;
+    rdfs:subClassOf     obo:BFO_0000031 ;
     rdfs:subClassOf     prov:Entity ;
     rdfs:label          "Observation"@en ;
     rdfs:comment        "One piece of observed data."@en .
@@ -308,6 +308,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 :Role
     rdf:type            owl:Class ;
+    rdfs:subClassOf     obo:BFO_0000019 ;
     rdfs:label          "Role"@en ;
     rdfs:comment        "Type of data represented by the Observation."@en .
 
@@ -377,6 +378,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 :Process
     rdf:type            owl:Class ;
+    rdfs:subClassOf     obo:BFO_0000031 ;
     rdfs:label          "Process"@en ;
     rdfs:comment        "One or more grouped operations in a system that can be defined and separated from others. A Process has an input of some Object(s) and an output of some Object(s)."@en .
 
@@ -390,6 +392,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 :MeasurementBound
     rdf:type            owl:Class ;
+    rdfs:subClassOf     obo:BFO_0000019 ;
     rdfs:label          "Measurement bound"@en ;
     rdfs:comment        "The type of constraint that the Observation represents (exact/lower/upper bound)."@en .
 

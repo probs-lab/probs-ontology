@@ -7,7 +7,7 @@ Options used:
 ```sh
 -ontFile ontology/probs.ttl
     'Load a local ontology file to document.'
--outFolder spec/MAJOR.MINOR.PATCH/
+-outFolder release/MAJOR.MINOR.PATCH/
     'Specifies the name of the folder where to save the documentation.'
 -getOntologyMetadata
     'Extract ontology metadata from the given ontology.'
@@ -37,7 +37,7 @@ Different modes are suggested depending on the specific case:
 The command used to generate the development version is:
 
 ```sh
-java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'spec/' -getOntologyMetadata -oops -htaccess -webVowl
+java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'release/' -getOntologyMetadata -oops -htaccess -webVowl
 ```
 
 This version can be used to visualise it locally (using a local server) and to evaluate the ontology (using the OOPS! service).
@@ -47,7 +47,7 @@ This version can be used to visualise it locally (using a local server) and to e
 To generate the public documentation to deploy using GitHub Pages, a copy of an existing deployed version needs to be created (using the current version number) and the following command should be used:
 
 ```sh
-java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'spec/MAJOR.MINOR.PATCH/' -getOntologyMetadata -webVowl -crossRef -rewriteAll
+java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'release/MAJOR.MINOR.PATCH/' -getOntologyMetadata -webVowl -crossRef -rewriteAll
 ```
 
 Then, if necessary, `introduction-en.html`, `description-en.html`, and `references-en.html` need to be updated.
@@ -59,7 +59,7 @@ This is useful when there are minor changes in the ontology since it does not up
 To generate the public documentation to deploy using GitHub Pages, the following command should be used:
 
 ```sh
-java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'spec/MAJOR.MINOR.PATCH/' -getOntologyMetadata -webVowl -rewriteAll
+java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'release/MAJOR.MINOR.PATCH/' -getOntologyMetadata -webVowl -rewriteAll
 ```
 
 Then, some changes need to be applied to the HTML files in the `sections` folder.
