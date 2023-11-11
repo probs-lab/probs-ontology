@@ -52,7 +52,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 :objectComposedOf
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "object composed of"@en ;
-    rdfs:comment        "Relation which connects an Object to the sub-Objects lower in the hierarchy, which collectively exhaustively describe the same things."@en ;
+    rdfs:comment        "Connects an Object to 'sub-Objects' lower in the hierarchy, which collectively exhaustively describe the same things."@en ;
     rdfs:domain         :Object ;
     rdfs:range          :Object .
 
@@ -63,7 +63,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdf:type            owl:SymmetricProperty ;
     rdf:type            owl:TransitiveProperty ;
     rdfs:label          "object equivalent to"@en ;
-    rdfs:comment        "Relation which connects two Objects which describe exacly the same thing."@en ;
+    rdfs:comment        "Connects two Objects which describe exacly the same thing."@en ;
     vann:example        "Cement :objectEquivalentTo CementInCOMTRADE."@en ;
     rdfs:domain         :Object ;
     rdfs:range          :Object .
@@ -170,7 +170,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 :processComposedOf
     rdf:type            owl:ObjectProperty ;
     rdfs:label          "process composed of"@en ;
-    rdfs:comment        "Relation which connects a Process to the sub-Processes lower in the hierarchy, which collectively exhaustively describe the same activities."@en ;
+    rdfs:comment        "Connects a Process to the 'sub-Processes' lower in the hierarchy, which collectively exhaustively describe the same activities."@en ;
     rdfs:domain         :Process ;
     rdfs:range          :Process .
 
@@ -181,7 +181,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdf:type            owl:SymmetricProperty ;
     rdf:type            owl:TransitiveProperty ;
     rdfs:label          "process equivalent to"@en ;
-    rdfs:comment        "Relation which connects two Processes which describe exacly the same thing."@en ;
+    rdfs:comment        "Connects two Processes which describe exacly the same thing."@en ;
     rdfs:domain         :Process ;
     rdfs:range          :Process .
 
@@ -281,7 +281,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Object ;
     rdfs:label          "ReferenceObject"@en ;
-    rdfs:comment        "A ReferenceObject is an Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en .
+    rdfs:comment        "An Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en .
 
 
 :ClassificationCode
@@ -303,21 +303,21 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdfs:subClassOf     obo:BFO_0000031 ;
     rdfs:subClassOf     prov:Entity ;
     rdfs:label          "Observation"@en ;
-    rdfs:comment        "One piece of observed data."@en .
+    rdfs:comment        "An individual observed data point."@en .
 
 
 :Role
     rdf:type            owl:Class ;
     rdfs:subClassOf     obo:BFO_0000019 ;
     rdfs:label          "Role"@en ;
-    rdfs:comment        "Type of data represented by the Observation."@en .
+    rdfs:comment        "Type of data represented by an Observation."@en .
 
 
 :Flow
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Role ;
     rdfs:label          "Flow"@en ;
-    rdfs:comment        "A Flow represents the measurement of a movement of Objects across Process boundaries or between Regions."@en .
+    rdfs:comment        "Movement of Objects across Process boundaries or between Regions."@en .
 
 
 :SoldProduction
@@ -359,7 +359,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     rdf:type            owl:Class ;
     rdfs:subClassOf     :Role ;
     rdfs:label          "Stock"@en ;
-    rdfs:comment        "A Stock represents the measurement of the accumulation of an Object within a Process."@en .
+    rdfs:comment        "Accumulation of an Object within a Process."@en .
 
 
 :DirectObservation
