@@ -272,7 +272,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 :Object
     rdf:type            owl:Class ;
-    rdfs:subClassOf     prov:Entity, obo:BFO_0000031 ;
+    rdfs:subClassOf     obo:BFO_0000031 ;
     rdfs:label          "Object"@en ;
     rdfs:comment        "What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services."@en .
 

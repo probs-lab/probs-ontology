@@ -15,7 +15,7 @@
     <owl:Ontology rdf:about="http://w3id.org/probs-lab/ontology">
         <owl:versionIRI rdf:resource="http://w3id.org/probs-lab/ontology-2.0.0"/>
         <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
-        <dc:abstract xml:lang="en">FIXME Similar to a description, but with a little bit more background and an explanation about the resued/extended vocabularies, context and applications using this ontology. It can be considered as the abstract of the paper describing you ontology.</dc:abstract>
+        <dc:abstract xml:lang="en">Information about energy and material production and consumption is important for understanding issues such as decarbonisation of industry, recycling, and waste management. The Physical Resources Observatory (PRObs) ontology defines entities useful for describing and integrating this type of data. It reuses existing vocabularies for provenance (PROV), measurements (QUDT), time (OWL Time) and spatial regions (Geonames). It can be used to describe existing data, and as a basis to compute derived data aggregated according to different hierarchies.</dc:abstract>
         <dc:contributor xml:lang="en">UK FIRES partners</dc:contributor>
         <dc:creator>Carla Saunders</dc:creator>
         <dc:creator>Rick Lupton</dc:creator>
@@ -257,7 +257,7 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#objectComposedOf">
         <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
         <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
-        <rdfs:comment xml:lang="en">Relation which connects an Object to the sub-Objects lower in the hierarchy, which collectively exhaustively describe the same things.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects an Object to &apos;sub-Objects&apos; lower in the hierarchy, which collectively exhaustively describe the same things.</rdfs:comment>
         <rdfs:label xml:lang="en">object composed of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -298,7 +298,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
         <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
         <vann:example xml:lang="en">Cement :objectEquivalentTo CementInCOMTRADE.</vann:example>
-        <rdfs:comment xml:lang="en">Relation which connects two Objects which describe exacly the same thing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects two Objects which describe exacly the same thing.</rdfs:comment>
         <rdfs:label xml:lang="en">object equivalent to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -350,7 +350,7 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#processComposedOf">
         <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
         <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
-        <rdfs:comment xml:lang="en">Relation which connects a Process to the sub-Processes lower in the hierarchy, which collectively exhaustively describe the same activities.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects a Process to the &apos;sub-Processes&apos; lower in the hierarchy, which collectively exhaustively describe the same activities.</rdfs:comment>
         <rdfs:label xml:lang="en">process composed of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -390,7 +390,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
         <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
-        <rdfs:comment xml:lang="en">Relation which connects two Processes which describe exacly the same thing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects two Processes which describe exacly the same thing.</rdfs:comment>
         <rdfs:label xml:lang="en">process equivalent to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -578,7 +578,7 @@
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Flow">
         <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Role"/>
-        <rdfs:comment xml:lang="en">A Flow represents the measurement of a movement of Objects across Process boundaries or between Regions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Movement of Objects across Process boundaries or between Regions.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow</rdfs:label>
     </owl:Class>
     
@@ -622,7 +622,6 @@
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Object">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:comment xml:lang="en">What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services.</rdfs:comment>
         <rdfs:label xml:lang="en">Object</rdfs:label>
     </owl:Class>
@@ -635,7 +634,7 @@
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Observation">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:comment xml:lang="en">One piece of observed data.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An individual observed data point.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
     
@@ -679,7 +678,7 @@
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#ReferenceObject">
         <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
-        <rdfs:comment xml:lang="en">A ReferenceObject is an Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships).</rdfs:comment>
+        <rdfs:comment xml:lang="en">An Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships).</rdfs:comment>
         <rdfs:label xml:lang="en">ReferenceObject</rdfs:label>
     </owl:Class>
     
@@ -690,7 +689,7 @@
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Role">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:comment xml:lang="en">Type of data represented by the Observation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Type of data represented by an Observation.</rdfs:comment>
         <rdfs:label xml:lang="en">Role</rdfs:label>
     </owl:Class>
     
@@ -712,7 +711,7 @@
 
     <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Stock">
         <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Role"/>
-        <rdfs:comment xml:lang="en">A Stock represents the measurement of the accumulation of an Object within a Process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Accumulation of an Object within a Process.</rdfs:comment>
         <rdfs:label xml:lang="en">Stock</rdfs:label>
     </owl:Class>
     

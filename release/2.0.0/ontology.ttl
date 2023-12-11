@@ -9,7 +9,7 @@
 <http://w3id.org/probs-lab/ontology> rdf:type owl:Ontology ;
                                       owl:versionIRI <http://w3id.org/probs-lab/ontology-2.0.0> ;
                                       <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0> ;
-                                      <http://purl.org/dc/elements/1.1/abstract> "FIXME Similar to a description, but with a little bit more background and an explanation about the resued/extended vocabularies, context and applications using this ontology. It can be considered as the abstract of the paper describing you ontology."@en ;
+                                      <http://purl.org/dc/elements/1.1/abstract> "Information about energy and material production and consumption is important for understanding issues such as decarbonisation of industry, recycling, and waste management. The Physical Resources Observatory (PRObs) ontology defines entities useful for describing and integrating this type of data. It reuses existing vocabularies for provenance (PROV), measurements (QUDT), time (OWL Time) and spatial regions (Geonames). It can be used to describe existing data, and as a basis to compute derived data aggregated according to different hierarchies."@en ;
                                       <http://purl.org/dc/elements/1.1/contributor> "UK FIRES partners"@en ;
                                       <http://purl.org/dc/elements/1.1/creator> "Carla Saunders" ,
                                                                                 "Rick Lupton" ,
@@ -157,7 +157,7 @@
 :objectComposedOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :Object ;
                   rdfs:range :Object ;
-                  rdfs:comment "Relation which connects an Object to the sub-Objects lower in the hierarchy, which collectively exhaustively describe the same things."@en ;
+                  rdfs:comment "Connects an Object to 'sub-Objects' lower in the hierarchy, which collectively exhaustively describe the same things."@en ;
                   rdfs:label "object composed of"@en .
 
 
@@ -186,7 +186,7 @@
                     rdfs:domain :Object ;
                     rdfs:range :Object ;
                     <http://purl.org/vocab/vann/example> "Cement :objectEquivalentTo CementInCOMTRADE."@en ;
-                    rdfs:comment "Relation which connects two Objects which describe exacly the same thing."@en ;
+                    rdfs:comment "Connects two Objects which describe exacly the same thing."@en ;
                     rdfs:label "object equivalent to"@en .
 
 
@@ -222,7 +222,7 @@
 :processComposedOf rdf:type owl:ObjectProperty ;
                    rdfs:domain :Process ;
                    rdfs:range :Process ;
-                   rdfs:comment "Relation which connects a Process to the sub-Processes lower in the hierarchy, which collectively exhaustively describe the same activities."@en ;
+                   rdfs:comment "Connects a Process to the 'sub-Processes' lower in the hierarchy, which collectively exhaustively describe the same activities."@en ;
                    rdfs:label "process composed of"@en .
 
 
@@ -250,7 +250,7 @@
                               owl:ReflexiveProperty ;
                      rdfs:domain :Process ;
                      rdfs:range :Process ;
-                     rdfs:comment "Relation which connects two Processes which describe exacly the same thing."@en ;
+                     rdfs:comment "Connects two Processes which describe exacly the same thing."@en ;
                      rdfs:label "process equivalent to"@en .
 
 
@@ -365,7 +365,7 @@
 ###  http://w3id.org/probs-lab/ontology#Flow
 :Flow rdf:type owl:Class ;
       rdfs:subClassOf :Role ;
-      rdfs:comment "A Flow represents the measurement of a movement of Objects across Process boundaries or between Regions."@en ;
+      rdfs:comment "Movement of Objects across Process boundaries or between Regions."@en ;
       rdfs:label "Flow"@en .
 
 
@@ -392,8 +392,7 @@
 
 ###  http://w3id.org/probs-lab/ontology#Object
 :Object rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                        <http://www.w3.org/ns/prov#Entity> ;
+        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
         rdfs:comment "What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services."@en ;
         rdfs:label "Object"@en .
 
@@ -402,7 +401,7 @@
 :Observation rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ,
                              <http://www.w3.org/ns/prov#Entity> ;
-             rdfs:comment "One piece of observed data."@en ;
+             rdfs:comment "An individual observed data point."@en ;
              rdfs:label "Observation"@en .
 
 
@@ -430,14 +429,14 @@
 ###  http://w3id.org/probs-lab/ontology#ReferenceObject
 :ReferenceObject rdf:type owl:Class ;
                  rdfs:subClassOf :Object ;
-                 rdfs:comment "A ReferenceObject is an Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en ;
+                 rdfs:comment "An Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en ;
                  rdfs:label "ReferenceObject"@en .
 
 
 ###  http://w3id.org/probs-lab/ontology#Role
 :Role rdf:type owl:Class ;
       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
-      rdfs:comment "Type of data represented by the Observation."@en ;
+      rdfs:comment "Type of data represented by an Observation."@en ;
       rdfs:label "Role"@en .
 
 
@@ -451,7 +450,7 @@
 ###  http://w3id.org/probs-lab/ontology#Stock
 :Stock rdf:type owl:Class ;
        rdfs:subClassOf :Role ;
-       rdfs:comment "A Stock represents the measurement of the accumulation of an Object within a Process."@en ;
+       rdfs:comment "Accumulation of an Object within a Process."@en ;
        rdfs:label "Stock"@en .
 
 

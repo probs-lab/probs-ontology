@@ -95,7 +95,7 @@
   } ],
   "http://purl.org/dc/elements/1.1/abstract" : [ {
     "@language" : "en",
-    "@value" : "FIXME Similar to a description, but with a little bit more background and an explanation about the resued/extended vocabularies, context and applications using this ontology. It can be considered as the abstract of the paper describing you ontology."
+    "@value" : "Information about energy and material production and consumption is important for understanding issues such as decarbonisation of industry, recycling, and waste management. The Physical Resources Observatory (PRObs) ontology defines entities useful for describing and integrating this type of data. It reuses existing vocabularies for provenance (PROV), measurements (QUDT), time (OWL Time) and spatial regions (Geonames). It can be used to describe existing data, and as a basis to compute derived data aggregated according to different hierarchies."
   } ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@language" : "en",
@@ -240,7 +240,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Flow represents the measurement of a movement of Objects across Process boundaries or between Regions."
+    "@value" : "Movement of Objects across Process boundaries or between Regions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -318,15 +318,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000031"
-  }, {
-    "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
   "@id" : "http://w3id.org/probs-lab/ontology#Observation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "One piece of observed data."
+    "@value" : "An individual observed data point."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -384,7 +382,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A ReferenceObject is an Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."
+    "@value" : "An Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -398,7 +396,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Type of data represented by the Observation."
+    "@value" : "Type of data represented by an Observation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -426,7 +424,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A Stock represents the measurement of the accumulation of an Object within a Process."
+    "@value" : "Accumulation of an Object within a Process."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -611,7 +609,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relation which connects an Object to the sub-Objects lower in the hierarchy, which collectively exhaustively describe the same things."
+    "@value" : "Connects an Object to 'sub-Objects' lower in the hierarchy, which collectively exhaustively describe the same things."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/probs-lab/ontology#Object"
@@ -686,7 +684,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relation which connects two Objects which describe exacly the same thing."
+    "@value" : "Connects two Objects which describe exacly the same thing."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/probs-lab/ontology#Object"
@@ -761,7 +759,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relation which connects a Process to the sub-Processes lower in the hierarchy, which collectively exhaustively describe the same activities."
+    "@value" : "Connects a Process to the 'sub-Processes' lower in the hierarchy, which collectively exhaustively describe the same activities."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/probs-lab/ontology#Process"
@@ -832,7 +830,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relation which connects two Processes which describe exacly the same thing."
+    "@value" : "Connects two Processes which describe exacly the same thing."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/probs-lab/ontology#Process"

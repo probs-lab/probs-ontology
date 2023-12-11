@@ -1,7 +1,7 @@
 <http://w3id.org/probs-lab/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://w3id.org/probs-lab/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/probs-lab/ontology-2.0.0> .
 <http://w3id.org/probs-lab/ontology> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0> .
-<http://w3id.org/probs-lab/ontology> <http://purl.org/dc/elements/1.1/abstract> "FIXME Similar to a description, but with a little bit more background and an explanation about the resued/extended vocabularies, context and applications using this ontology. It can be considered as the abstract of the paper describing you ontology."@en .
+<http://w3id.org/probs-lab/ontology> <http://purl.org/dc/elements/1.1/abstract> "Information about energy and material production and consumption is important for understanding issues such as decarbonisation of industry, recycling, and waste management. The Physical Resources Observatory (PRObs) ontology defines entities useful for describing and integrating this type of data. It reuses existing vocabularies for provenance (PROV), measurements (QUDT), time (OWL Time) and spatial regions (Geonames). It can be used to describe existing data, and as a basis to compute derived data aggregated according to different hierarchies."@en .
 <http://w3id.org/probs-lab/ontology> <http://purl.org/dc/elements/1.1/contributor> "UK FIRES partners"@en .
 <http://w3id.org/probs-lab/ontology> <http://purl.org/dc/elements/1.1/creator> "Carla Saunders" .
 <http://w3id.org/probs-lab/ontology> <http://purl.org/dc/elements/1.1/creator> "Rick Lupton" .
@@ -139,7 +139,7 @@
 <http://w3id.org/probs-lab/ontology#objectComposedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/probs-lab/ontology#objectComposedOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/probs-lab/ontology#Object> .
 <http://w3id.org/probs-lab/ontology#objectComposedOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/probs-lab/ontology#Object> .
-<http://w3id.org/probs-lab/ontology#objectComposedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation which connects an Object to the sub-Objects lower in the hierarchy, which collectively exhaustively describe the same things."@en .
+<http://w3id.org/probs-lab/ontology#objectComposedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an Object to 'sub-Objects' lower in the hierarchy, which collectively exhaustively describe the same things."@en .
 <http://w3id.org/probs-lab/ontology#objectComposedOf> <http://www.w3.org/2000/01/rdf-schema#label> "object composed of"@en .
 # 
 # http://w3id.org/probs-lab/ontology#objectDefinedBy
@@ -165,7 +165,7 @@
 <http://w3id.org/probs-lab/ontology#objectEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/probs-lab/ontology#Object> .
 <http://w3id.org/probs-lab/ontology#objectEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/probs-lab/ontology#Object> .
 <http://w3id.org/probs-lab/ontology#objectEquivalentTo> <http://purl.org/vocab/vann/example> "Cement :objectEquivalentTo CementInCOMTRADE."@en .
-<http://w3id.org/probs-lab/ontology#objectEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation which connects two Objects which describe exacly the same thing."@en .
+<http://w3id.org/probs-lab/ontology#objectEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects two Objects which describe exacly the same thing."@en .
 <http://w3id.org/probs-lab/ontology#objectEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#label> "object equivalent to"@en .
 # 
 # http://w3id.org/probs-lab/ontology#objectInferredDefinedBy
@@ -197,7 +197,7 @@
 <http://w3id.org/probs-lab/ontology#processComposedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/probs-lab/ontology#processComposedOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/probs-lab/ontology#Process> .
 <http://w3id.org/probs-lab/ontology#processComposedOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/probs-lab/ontology#Process> .
-<http://w3id.org/probs-lab/ontology#processComposedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation which connects a Process to the sub-Processes lower in the hierarchy, which collectively exhaustively describe the same activities."@en .
+<http://w3id.org/probs-lab/ontology#processComposedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a Process to the 'sub-Processes' lower in the hierarchy, which collectively exhaustively describe the same activities."@en .
 <http://w3id.org/probs-lab/ontology#processComposedOf> <http://www.w3.org/2000/01/rdf-schema#label> "process composed of"@en .
 # 
 # http://w3id.org/probs-lab/ontology#processDefinedBy
@@ -222,7 +222,7 @@
 <http://w3id.org/probs-lab/ontology#processEquivalentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
 <http://w3id.org/probs-lab/ontology#processEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/probs-lab/ontology#Process> .
 <http://w3id.org/probs-lab/ontology#processEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/probs-lab/ontology#Process> .
-<http://w3id.org/probs-lab/ontology#processEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation which connects two Processes which describe exacly the same thing."@en .
+<http://w3id.org/probs-lab/ontology#processEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects two Processes which describe exacly the same thing."@en .
 <http://w3id.org/probs-lab/ontology#processEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#label> "process equivalent to"@en .
 # 
 # http://w3id.org/probs-lab/ontology#processInferredDefinedBy
@@ -331,7 +331,7 @@
 # http://w3id.org/probs-lab/ontology#Flow
 <http://w3id.org/probs-lab/ontology#Flow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Flow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/probs-lab/ontology#Role> .
-<http://w3id.org/probs-lab/ontology#Flow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Flow represents the measurement of a movement of Objects across Process boundaries or between Regions."@en .
+<http://w3id.org/probs-lab/ontology#Flow> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement of Objects across Process boundaries or between Regions."@en .
 <http://w3id.org/probs-lab/ontology#Flow> <http://www.w3.org/2000/01/rdf-schema#label> "Flow"@en .
 # 
 # http://w3id.org/probs-lab/ontology#Import
@@ -355,8 +355,6 @@
 # http://w3id.org/probs-lab/ontology#Object
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000031> .
-<http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
-<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services."@en .
 <http://w3id.org/probs-lab/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
 # 
@@ -364,7 +362,8 @@
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000031> .
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
-<http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "One piece of observed data."@en .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual observed data point."@en .
 <http://w3id.org/probs-lab/ontology#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
 # 
 # http://w3id.org/probs-lab/ontology#Process
@@ -388,13 +387,13 @@
 # http://w3id.org/probs-lab/ontology#ReferenceObject
 <http://w3id.org/probs-lab/ontology#ReferenceObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#ReferenceObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/probs-lab/ontology#Object> .
-<http://w3id.org/probs-lab/ontology#ReferenceObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A ReferenceObject is an Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en .
+<http://w3id.org/probs-lab/ontology#ReferenceObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships)."@en .
 <http://w3id.org/probs-lab/ontology#ReferenceObject> <http://www.w3.org/2000/01/rdf-schema#label> "ReferenceObject"@en .
 # 
 # http://w3id.org/probs-lab/ontology#Role
 <http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000019> .
-<http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of data represented by the Observation."@en .
+<http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of data represented by an Observation."@en .
 <http://w3id.org/probs-lab/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
 # 
 # http://w3id.org/probs-lab/ontology#SoldProduction
@@ -406,7 +405,7 @@
 # http://w3id.org/probs-lab/ontology#Stock
 <http://w3id.org/probs-lab/ontology#Stock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/probs-lab/ontology#Stock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/probs-lab/ontology#Role> .
-<http://w3id.org/probs-lab/ontology#Stock> <http://www.w3.org/2000/01/rdf-schema#comment> "A Stock represents the measurement of the accumulation of an Object within a Process."@en .
+<http://w3id.org/probs-lab/ontology#Stock> <http://www.w3.org/2000/01/rdf-schema#comment> "Accumulation of an Object within a Process."@en .
 <http://w3id.org/probs-lab/ontology#Stock> <http://www.w3.org/2000/01/rdf-schema#label> "Stock"@en .
 # 
 # http://www.geonames.org/ontology#Feature
