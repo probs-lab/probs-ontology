@@ -2,7 +2,8 @@
 
 This documentation has been generated using the [Widoco](https://github.com/dgarijo/Widoco).
 
-Options used:
+<details>
+  <summary>Options used</summary>
 
 ```sh
 -ontFile ontology/probs.ttl
@@ -22,6 +23,8 @@ Options used:
 -webVowl
     'Create a visualization based on WebVowl in the documentation.'
 ```
+
+</details>
 
 Different modes are suggested depending on the specific case:
 
@@ -64,9 +67,12 @@ java -jar '[...]widoco[...].jar' -ontFile 'ontology/probs.ttl' -outFolder 'relea
 
 Then, some changes need to be applied to the HTML files in the `sections` folder.
 
-> It is worth noting that [I opened an issue about this](https://github.com/dgarijo/Widoco/issues/604). Hopefully we will not have to change them any more in the future.
+> It is worth noting that [there is an issue opened about this](https://github.com/dgarijo/Widoco/issues/604). Hopefully we will not have to change them any more in the future.
 
 The following should be added in the `introduction-en` file:
+
+<details>
+  <summary>Custom content</summary>
 
 ```html
 <p>
@@ -101,9 +107,15 @@ The following should be added in the `introduction-en` file:
 </div>
 ```
 
+</details>
+
 replacing the placeholder text.
 
 The following should replace the content in the `description-en` file:
+
+
+<details>
+  <summary>Custom content</summary>
 
 ```html
 <h2 id="desc" class="list">
@@ -135,7 +147,13 @@ The following should replace the content in the `description-en` file:
 </p>
 ```
 
+</details>
+
 The following should replace the content in the `references-en` file:
+
+
+<details>
+  <summary>Custom content</summary>
 
 ```html
 <h2 id="ref" class="list">
@@ -171,6 +189,8 @@ The following should replace the content in the `references-en` file:
 </dl>
 ```
 
+</details>
+
 ## Cleaning documentation
 
 The tools included in the documentation contain resources hosted by other entities.
@@ -197,7 +217,7 @@ Therefore, we simply need to replace `https://img.shields.io/badge` with `images
 
 And, the "Namespace declarations" table could be ordered lexicographically.
 
-> It is worth noting that [I opened an issue about this](https://github.com/dgarijo/Widoco/issues/610). Hopefully we will not have to change it any more in the future.
+> It is worth noting that [there is an issue opened about this](https://github.com/dgarijo/Widoco/issues/610). Hopefully we will not have to change it any more in the future.
 
 <details>
   <summary>Example</summary>
@@ -294,4 +314,4 @@ And, the "Namespace declarations" table could be ordered lexicographically.
 The system automatically sorts the authors lexicographically.
 We need to manually re-order them in the `index-en.html` file.
 
-> It is worth noting that [I opened an issue about this](https://github.com/dgarijo/Widoco/issues/608). Hopefully we will not have to change it any more in the future.
+> It is worth noting that [there is an issue opened about this](https://github.com/dgarijo/Widoco/issues/608). Hopefully we will not have to change it any more in the future.
