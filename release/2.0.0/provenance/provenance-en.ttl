@@ -1,0 +1,18 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://w3id.org/probs-lab/ontology-2.0.0> a prov:Entity;
+	 dc:title "Physical Resources Observatory (PRObs) Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://ukfires.org/probs/ontology-1.5.2>;
+	 prov:wasGeneratedAt "2020-10-02";
+.
+:agent0 a prov:Agent; foaf:name "Carla Saunders".
+:agent1 a prov:Agent; foaf:name "Rick Lupton".
+:agent2 a prov:Agent; foaf:name "Stefano Germano".
+:agent3 a prov:Agent; foaf:name "UK FIRES partners".

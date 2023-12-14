@@ -1,0 +1,849 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/probs-lab/ontology#"
+     xml:base="http://w3id.org/probs-lab/ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/probs-lab/ontology">
+        <owl:versionIRI rdf:resource="http://w3id.org/probs-lab/ontology-2.0.0"/>
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
+        <dc:abstract xml:lang="en">Information about energy and material production and consumption is important for understanding issues such as decarbonisation of industry, recycling, and waste management. The Physical Resources Observatory (PRObs) ontology defines entities useful for describing and integrating this type of data. It reuses existing vocabularies for provenance (PROV), measurements (QUDT), time (OWL Time) and spatial regions (Geonames). It can be used to describe existing data, and as a basis to compute derived data aggregated according to different hierarchies.</dc:abstract>
+        <dc:contributor xml:lang="en">UK FIRES partners</dc:contributor>
+        <dc:creator>Carla Saunders</dc:creator>
+        <dc:creator>Rick Lupton</dc:creator>
+        <dc:creator>Stefano Germano</dc:creator>
+        <dc:description xml:lang="en">The ontology describes entities useful for the development of the Physical Resources Observatory (PRObs) data integration system.</dc:description>
+        <dc:issued>2020-10-02</dc:issued>
+        <dc:modified>2023-01-27</dc:modified>
+        <dc:title xml:lang="en">Physical Resources Observatory (PRObs) Ontology</dc:title>
+        <terms:created>2020-10-02</terms:created>
+        <vann:preferredNamespacePrefix>probs</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/probs-lab/ontology#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">The ontology describes entities useful for the development of the Physical Resources Observatory (PRObs) data integration system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Resources Observatory (PRObs) Ontology</rdfs:label>
+        <owl:priorVersion rdf:resource="https://ukfires.org/probs/ontology-1.5.2"/>
+        <owl:versionInfo>2.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#memberOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#consumes -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#consumes">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Describes that an Object is an input to a Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#hasBound -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#hasBound">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#MeasurementBound"/>
+        <rdfs:comment xml:lang="en">Specifies the type of constraint that the Observation represents (exact/lower/upper bound).</rdfs:comment>
+        <rdfs:label xml:lang="en">has bound</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#hasClassificationCode -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#hasClassificationCode">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#ClassificationCode"/>
+        <vann:example xml:lang="en">Object10.11.11.40 :hasClassificationCode 10.11.11.40.</vann:example>
+        <rdfs:comment xml:lang="en">Links an Object to the ClassificationCode which describes it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has classification code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#hasMetric -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#hasMetric">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:comment xml:lang="en">The way in which a measurement is quantified (e.g. by mass, or by volume).</rdfs:comment>
+        <rdfs:label xml:lang="en">has metric</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#hasRegion -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#hasRegion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:comment xml:lang="en">Links an Observation to the Region in which it was measured.</rdfs:comment>
+        <rdfs:label xml:lang="en">has region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#hasRole">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Role"/>
+        <rdfs:comment xml:lang="en">Links an Observation to the type of data represented by it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#hasTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#hasTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">Links an Observation to the Time in which it was measured.</rdfs:comment>
+        <rdfs:label xml:lang="en">has time period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#objectComposedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#objectComposedOf">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Connects an Object to &apos;sub-Objects&apos; lower in the hierarchy, which collectively exhaustively describe the same things.</rdfs:comment>
+        <rdfs:label xml:lang="en">object composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#objectDefinedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#objectDefinedBy">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Links an Observation to the Object it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">object defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#objectDirectlyDefinedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#objectDirectlyDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/probs-lab/ontology#objectDefinedBy"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#DirectObservation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Links a direct Observation to the Object it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">object directly defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#objectEquivalentTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#objectEquivalentTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <vann:example xml:lang="en">Cement :objectEquivalentTo CementInCOMTRADE.</vann:example>
+        <rdfs:comment xml:lang="en">Connects two Objects which describe exacly the same thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">object equivalent to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#objectInferredDefinedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#objectInferredDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/probs-lab/ontology#objectDefinedBy"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#InferredObservation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Links an inferred Observation to the Object it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">object inferred defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#partOfDataset -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#partOfDataset">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Dataset"/>
+        <rdfs:comment xml:lang="en">Links an Observation to the Dataset it is a part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">part of dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#partOfList -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#partOfList">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#ClassificationCode"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#ClassificationCodeList"/>
+        <vann:example xml:lang="en">10.11.11.40 :partOfList 2017PRODCOMlist</vann:example>
+        <rdfs:comment xml:lang="en">Each ClassificationCode belongs to a ClassificationCodeList.</rdfs:comment>
+        <rdfs:label xml:lang="en">part of list</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#processComposedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#processComposedOf">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:comment xml:lang="en">Connects a Process to the &apos;sub-Processes&apos; lower in the hierarchy, which collectively exhaustively describe the same activities.</rdfs:comment>
+        <rdfs:label xml:lang="en">process composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#processDefinedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#processDefinedBy">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:comment xml:lang="en">Links an Observation to the Process it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">process defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#processDirectlyDefinedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#processDirectlyDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/probs-lab/ontology#processDefinedBy"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#DirectObservation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:comment xml:lang="en">Links a direct Observation to the Process it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">process directly defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#processEquivalentTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#processEquivalentTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:comment xml:lang="en">Connects two Processes which describe exacly the same thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">process equivalent to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#processInferredDefinedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#processInferredDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/probs-lab/ontology#processDefinedBy"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#InferredObservation"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:comment xml:lang="en">Links an inferred Observation to the Process it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">process inferred defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#produces -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/probs-lab/ontology#produces">
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:range rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Describes that an Object is an output of a Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#codeDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/probs-lab/ontology#codeDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#ClassificationCode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Links a ClassificationCode to a human-readable description, usually defined by the body which maintains the ClassificationCodeList.</rdfs:comment>
+        <rdfs:label xml:lang="en">code description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#measurement -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/probs-lab/ontology#measurement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The actual quantity of an Observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#objectDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/probs-lab/ontology#objectDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Links an Object to a human-readable description of that Object.</rdfs:comment>
+        <rdfs:label xml:lang="en">object description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#processDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/probs-lab/ontology#processDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/probs-lab/ontology#Process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Links a Process to a human-readable description of that Object</rdfs:comment>
+        <rdfs:label xml:lang="en">process description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/QuantityKind -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityKind"/>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#ClassificationCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#ClassificationCode">
+        <vann:example xml:lang="en">10.11.11.40 in the 2017-18 PRODCOM list.</vann:example>
+        <rdfs:comment xml:lang="en">A label within a ClassificationCodeList.</rdfs:comment>
+        <rdfs:label xml:lang="en">Classification code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#ClassificationCodeList -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#ClassificationCodeList">
+        <vann:example xml:lang="en">The 2017-18 PRODCOM list or the 2018 HS classification.</vann:example>
+        <rdfs:comment xml:lang="en">A set of ClassificationCodes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Classification code list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Dataset -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Dataset">
+        <vann:example xml:lang="en">The 2018 PRODCOM dataset.</vann:example>
+        <rdfs:comment xml:lang="en">A collection of Observations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#DirectObservation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#DirectObservation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:comment xml:lang="en">An Observation directly derived from data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Direct observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Export -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Export">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Flow"/>
+        <rdfs:comment xml:lang="en">A Flow which measures the quantity of an Object leaving a Region.</rdfs:comment>
+        <rdfs:label xml:lang="en">Export</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Flow -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Flow">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Role"/>
+        <rdfs:comment xml:lang="en">Movement of Objects across Process boundaries or between Regions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Import -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Import">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Flow"/>
+        <rdfs:comment xml:lang="en">A Flow which measures the quantity of an Object entering a Region.</rdfs:comment>
+        <rdfs:label xml:lang="en">Import</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#InferredObservation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#InferredObservation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Observation"/>
+        <rdfs:comment xml:lang="en">An Observation inferred from other Observations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inferred observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#MeasurementBound -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#MeasurementBound">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">The type of constraint that the Observation represents (exact/lower/upper bound).</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement bound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Object -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Object">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">What is flowing in a Flow, or accumulated in a Stock. This is a more general term that includes Goods and Substances, but also non-material things such as energy and services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Observation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Observation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">An individual observed data point.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Process -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Process">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">One or more grouped operations in a system that can be defined and separated from others. A Process has an input of some Object(s) and an output of some Object(s).</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#ProcessInput -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#ProcessInput">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Flow"/>
+        <rdfs:comment xml:lang="en">A Flow which measures the input of a specific Object into a Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process input</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#ProcessOutput -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#ProcessOutput">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Flow"/>
+        <rdfs:comment xml:lang="en">A Flow which describes the output of a specific Object from a Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process output observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#ReferenceObject -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#ReferenceObject">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Object"/>
+        <rdfs:comment xml:lang="en">An Object type that has been purposefully defined as part of a description of the physical system (as opposed to some Object types that may be generated to encode more complex relationships).</rdfs:comment>
+        <rdfs:label xml:lang="en">ReferenceObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Role -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">Type of data represented by an Observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#SoldProduction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#SoldProduction">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Flow"/>
+        <rdfs:comment xml:lang="en">A Flow which measures the total sold production of an Object. Defined by PRODCOM to exclude the goods that may have been produced within the factory boundary, but haven&apos;t yet left the factory gate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sold production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#Stock -->
+
+
+    <owl:Class rdf:about="http://w3id.org/probs-lab/ontology#Stock">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/probs-lab/ontology#Role"/>
+        <rdfs:comment xml:lang="en">Accumulation of an Object within a Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology#Feature"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#ExactBound -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/probs-lab/ontology#ExactBound">
+        <rdf:type rdf:resource="http://w3id.org/probs-lab/ontology#MeasurementBound"/>
+        <rdfs:comment xml:lang="en">When an Observation has an ExactBound bound, it states that the true value is equal to the Observation&apos;s measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exact bound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#LowerBound -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/probs-lab/ontology#LowerBound">
+        <rdf:type rdf:resource="http://w3id.org/probs-lab/ontology#MeasurementBound"/>
+        <rdfs:comment xml:lang="en">When an Observation has a LowerBound bound, it states that the true value is at least as great as the Observation&apos;s measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lower bound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/probs-lab/ontology#UpperBound -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/probs-lab/ontology#UpperBound">
+        <rdf:type rdf:resource="http://w3id.org/probs-lab/ontology#MeasurementBound"/>
+        <rdfs:comment xml:lang="en">When an Observation has an UpperBound bound, it states that the true value is at most as great as the Observation&apos;s measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Upper bound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://orcid.org/0000-0001-6699-2848">
+        <org:memberOf rdf:nodeID="genid1"/>
+        <foaf:name>Carla Saunders</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid1">
+        <foaf:homepage>https://www.bath.ac.uk</foaf:homepage>
+        <foaf:name>University of Bath</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://orcid.org/0000-0001-6993-0618">
+        <org:memberOf rdf:nodeID="genid2"/>
+        <foaf:name>Stefano Germano</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <foaf:homepage>https://www.ox.ac.uk</foaf:homepage>
+        <foaf:name>University of Oxford</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://orcid.org/0000-0001-8622-3085">
+        <org:memberOf rdf:nodeID="genid3"/>
+        <foaf:name>Rick Lupton</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <foaf:homepage>https://www.bath.ac.uk</foaf:homepage>
+        <foaf:name>University of Bath</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#ClassificationCode"/>
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#Dataset"/>
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#MeasurementBound"/>
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#Object"/>
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#Observation"/>
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#Process"/>
+            <rdf:Description rdf:about="http://w3id.org/probs-lab/ontology#Role"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

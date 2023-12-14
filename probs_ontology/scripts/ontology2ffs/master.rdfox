@@ -1,7 +1,0 @@
-
-
-exec scripts/ontology2ffs/init
-
-exec convert
-
-quit

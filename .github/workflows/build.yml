@@ -15,33 +15,38 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [3.11]
         config:
           - os: ubuntu-latest
-            url: https://rdfox-distribution.s3.eu-west-2.amazonaws.com/release/v4.1.0/RDFox-linux-4.1.0.zip
-            name: RDFox
-            pathInArchive: RDFox-linux-4.1.0/RDFox
+
+    defaults:
+      # Needed for conda environment (https://github.com/marketplace/actions/setup-miniconda#use-a-default-shell)
+      run:
+        shell: bash -l {0}
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v4
+    - name: Cache conda
+      uses: actions/cache@v3
+      env:
+        # Increase this value to reset cache if environment.yml has not changed
+        CACHE_NUMBER: 0
       with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install RDFox
-      uses: engineerd/configurator@v0.0.6
+        path: ~/conda_pkgs_dir
+        key:
+          ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{ hashFiles('environment.yml') }}
+    - uses: conda-incubator/setup-miniconda@v2
       with:
-        name: ${{ matrix.config.name }}
-        url: ${{ matrix.config.url }}
-        pathInArchive: ${{ matrix.config.pathInArchive }}
-    - name: Install dependencies
+        activate-environment: probs-module-data-conversion
+        environment-file: environment.yml
+        python-version:  ${{ matrix.python-version }}
+        auto-activate-base: false
+        # use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly
+    - name: Convert ontology
       run: |
-        python -m pip install --upgrade pip
-        python -m pip install '.[docs,test]'
-        python -m pip install pyparsing==2.4.7
-    - name: Run tests
-      run: |
-        python -m pytest
+        cd conversion
+        python convert_ontology.py additional_ontologies/*
+        python -m build
       env:
         RDFOX_LICENSE_CONTENT: ${{ secrets.RDFOX_LICENSE }}
     - name: Build documentation

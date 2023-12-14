@@ -1,24 +1,22 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: intro
-
-- part: Introduction
+format: jb-book
+root: intro
+parts:
+- caption: Introduction
   chapters:
-    - file: system
-
-- part: PRObs ontology concepts
+  - file: system
+- caption: PRObs ontology concepts
   chapters:
-    - file: observations
-    - file: composition_equivalence
-    - file: inferred_observations
-    - file: provenance
-    - file: classification_codes
-
-- part: Automatic Knowledge Completion
+  - file: observations
+  - file: composition_equivalence
+  - file: inferred_observations
+  - file: provenance
+  - file: classification_codes
+- caption: Automatic Knowledge Completion
   chapters:
-    - file: reasoning/intro
-
-- part: Endmatter
+  - file: reasoning/intro
+- caption: Ontology reference
   chapters:
-    - file: references
+  - url: http://w3id.org/probs-lab/ontology
+- caption: Endmatter
+  chapters:
+  - file: references

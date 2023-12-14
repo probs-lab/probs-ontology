@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5052738.svg)](https://doi.org/10.5281/zenodo.5052738)
 
-This repository contains the "Physical Resources Observatory" (PRObs) ontology. It includes both the concepts and relations as an OWL ontology, Datalog rules, and scripts designed to be run with  the [RDFox triple store](https://www.oxfordsemantic.tech/product). 
+This repository contains the "Physical Resources Observatory" (PRObs) ontology. It includes definitions of the concepts and relations as an OWL ontology in TTL format, as well as a version converted to Datalog rules and RDF data designed to be run with the [RDFox triple store](https://www.oxfordsemantic.tech/product). 
 
 This ontology is being developed as part of [UK FIRES](https://ukfires.org).
 
@@ -10,9 +10,9 @@ This ontology is being developed as part of [UK FIRES](https://ukfires.org).
 
 See the [documentation](https://probs-ontology.netlify.app/) for more information about the ontology concepts and how it can be used.
 
-You can obtain a copy of the ontology files from this git repository, or by installing the Python package `probs_ontology`.
+You can obtain a copy of the ontology files from this git repository. For use with the PRObs data pipeline see [probs-module-ontology-conversion](https://github.com/probs-lab/probs-module-ontology-conversion).
 
-See [probs-ontology-example](https://github.com/ukfires/probs-ontology-example/) for a practical example of using the PRObs system to access resource data.
+[TODO: update this example for v2 -- See [probs-ontology-example](https://github.com/ukfires/probs-ontology-example/) for a practical example of using the PRObs system to access resource data.]
 
 ## Contributing 🎁
 
@@ -29,5 +29,3 @@ See [DEVELOPING.md](DEVELOPING.md) for more information
 ## License
 
 The PRObs ontology is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-
-The Python code is licensed under the [MIT License](probs_ontology/runner/LICENSE).

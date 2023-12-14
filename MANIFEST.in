@@ -1,5 +1,0 @@
-recursive-include probs_ontology *
-recursive-include probs_ontology/scripts *
-
-# Unwanted files
-global-exclude *.DS_Store

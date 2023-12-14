@@ -1,0 +1,6 @@
+name: probs-ontology
+channels: [conda-forge, nodefaults]
+dependencies:
+  - python=3.11.*
+  - pip=23.*
+  - jupyter-book=0.15.*
