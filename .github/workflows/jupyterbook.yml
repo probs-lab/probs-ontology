@@ -45,6 +45,8 @@ jobs:
         run: |
           pip install 'jupyter-book==0.15.*'
           jupyter-book build docs
+          # Include pre-prepared release info
+          cp -pr release docs/_build/html
       - name: Upload artifact
         if: github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v2
